@@ -1,0 +1,1908 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container .circle-inner-container {
+  width: 500px;
+  height: 500px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.container .circle-inner-container .volcano, .container .circle-inner-container .volcano::after {
+  position: absolute;
+  width: 10px;
+  height: 0;
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+}
+
+.tree, .branch-left, .branch-left-big, .branch-right, .container .circle-inner-container .tree-one .branch-right-small, .container .circle-inner-container .tree-one-reflection .branch-right-small, .container .circle-inner-container .tree-high .branch-right-small, .container .circle-inner-container .tree-high-reflection .branch-right-small, .branch-right-small, .container .circle-inner-container .mountain-back, .container .circle-inner-container .mountain-back::after, .container .circle-inner-container .volcano-ice-top, .container .circle-inner-container .volcano-ice-top::after, .container .circle-inner-container .volcano-ice-bottom, .container .circle-inner-container .volcano-ice-bottom::after, .container .circle-inner-container .volcano-ice-bottom-middle, .container .circle-inner-container .volcano-ice-bottom-middle::after, .container .circle-inner-container .volcano-ice-bottom-right, .container .circle-inner-container .volcano-ice-bottom-right::after, .container .circle-inner-container .shore, .container .circle-inner-container .shore::after, .container .circle-inner-container .shore-middle-reflection, .container .circle-inner-container .shore-front, .container .circle-inner-container .shore-dark-front, .container .circle-inner-container .shore-front-reflection {
+  width: 0;
+  height: 0;
+}
+
+.container .circle-inner-container .mountain-back, .container .circle-inner-container .mountain-back::after, .container .circle-inner-container .mountain-top, .container .circle-inner-container .mountain-top::after, .container .circle-inner-container .mountain-front, .container .circle-inner-container .mountain-front::after {
+  position: absolute;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+}
+
+.container .circle-inner-container .cloud-back, .container .circle-inner-container .cloud-front, .container .circle-inner-container .smoke-left, .container .circle-inner-container .smoke-left-reflection, .container .circle-inner-container .smoke-right-one, .container .circle-inner-container .smoke-right-one-reflection, .container .circle-inner-container .smoke-right-two, .container .circle-inner-container .smoke-right-two-reflection, .container .circle-inner-container .volcano-smoke-small, .container .circle-inner-container .volcano-smoke-small-reflection {
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(rgba(0, 8, 37, 0.42)));
+  background: linear-gradient(0deg, transparent 0%, rgba(0, 8, 37, 0.42) 100%);
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+}
+
+.circle-inner-container > *, * ::after {
+  position: absolute;
+}
+
+.cloud-movement {
+  -webkit-animation: cloud-move 15s linear normal 2;
+          animation: cloud-move 15s linear normal 2;
+}
+
+.earthquake {
+  -webkit-animation: earthquake 5.5s ease-out normal 1;
+          animation: earthquake 5.5s ease-out normal 1;
+}
+
+.smoke-up {
+  -webkit-animation: volcano-smoking 15s ease-out normal 1;
+          animation: volcano-smoking 15s ease-out normal 1;
+}
+
+.smoke-up-two {
+  -webkit-animation: volcano-smoking-two 15s ease-out normal 1;
+          animation: volcano-smoking-two 15s ease-out normal 1;
+}
+
+.smoke-up-reflection {
+  -webkit-animation: volcano-smoking-reflection 15s ease-out normal 1;
+          animation: volcano-smoking-reflection 15s ease-out normal 1;
+}
+
+.smoke-up-reflection-two {
+  -webkit-animation: volcano-smoking-reflection-two 15s ease-out normal 1;
+          animation: volcano-smoking-reflection-two 15s ease-out normal 1;
+}
+
+.bottom-right-down {
+  -webkit-animation: bottom-right-smoking 12s ease-out normal 1;
+          animation: bottom-right-smoking 12s ease-out normal 1;
+}
+
+.bottom-right-down-reflection {
+  -webkit-animation: bottom-right-smoking-reflection 12s ease-out normal 1;
+          animation: bottom-right-smoking-reflection 12s ease-out normal 1;
+}
+
+.bottom-left-down {
+  -webkit-animation: bottom-left-smoking 12s ease-out normal 1;
+          animation: bottom-left-smoking 12s ease-out normal 1;
+}
+
+.bottom-left-down-reflection {
+  -webkit-animation: bottom-left-smoking-reflection 12s ease-out normal 1;
+          animation: bottom-left-smoking-reflection 12s ease-out normal 1;
+}
+
+.flash-smoke {
+  -webkit-animation: flash-smoke 5.5s ease-out normal 2;
+          animation: flash-smoke 5.5s ease-out normal 2;
+}
+
+.flash-lava-column {
+  -webkit-animation: flash-lava 3.5s ease-out normal 1;
+          animation: flash-lava 3.5s ease-out normal 1;
+}
+
+.show-disapeare {
+  -webkit-animation: show-disapeare 7s ease-out normal 1;
+          animation: show-disapeare 7s ease-out normal 1;
+}
+
+.tree-quake {
+  -webkit-animation: tree-quake 5.5s linear normal 1;
+          animation: tree-quake 5.5s linear normal 1;
+}
+
+.tree-quake-reflection {
+  -webkit-animation: tree-quake-reflection 5.5s linear normal 1;
+          animation: tree-quake-reflection 5.5s linear normal 1;
+}
+
+.wave-movment {
+  -webkit-animation: wave-moving 18s ease-in normal 1;
+          animation: wave-moving 18s ease-in normal 1;
+}
+
+.wave-movment-two {
+  -webkit-animation: wave-moving-two 17s ease-in normal 1;
+          animation: wave-moving-two 17s ease-in normal 1;
+}
+
+.tree {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  z-index: 11;
+  border-bottom-right-radius: 13%;
+  border-bottom-left-radius: 13%;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+
+.branch-left, .branch-left-big, .branch-right, .container .circle-inner-container .tree-one .branch-right-small, .container .circle-inner-container .tree-one-reflection .branch-right-small, .container .circle-inner-container .tree-high .branch-right-small, .container .circle-inner-container .tree-high-reflection .branch-right-small, .branch-right-small {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  position: absolute;
+}
+
+.crown, .container .circle-inner-container .tree-one .tree-top, .container .circle-inner-container .tree-one-reflection .tree-top, .container .circle-inner-container .tree-three .tree-top, .container .circle-inner-container .tree-three-reflection .tree-top, .crown-oval, .container .circle-inner-container .tree-one .crown-oval-top, .container .circle-inner-container .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-bottom, .container .circle-inner-container .tree-high .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-bottom, .container .circle-inner-container .tree-three .crown-oval-top, .container .circle-inner-container .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-bottom {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  position: absolute;
+  background-color: #48412e;
+}
+
+.crown, .container .circle-inner-container .tree-one .tree-top, .container .circle-inner-container .tree-one-reflection .tree-top, .container .circle-inner-container .tree-three .tree-top, .container .circle-inner-container .tree-three-reflection .tree-top {
+  border-radius: 50px 50px 0 0;
+}
+
+.crown-oval, .container .circle-inner-container .tree-one .crown-oval-top, .container .circle-inner-container .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-bottom, .container .circle-inner-container .tree-high .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-bottom, .container .circle-inner-container .tree-three .crown-oval-top, .container .circle-inner-container .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-bottom {
+  border-radius: 50%;
+}
+
+.wave, .container .circle-inner-container .wave-two, .ripple {
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(245, 238, 102, 0.5)), color-stop(50%, transparent), to(rgba(111, 99, 60, 0.5)));
+  background: linear-gradient(0deg, rgba(245, 238, 102, 0.5) 0%, transparent 50%, rgba(111, 99, 60, 0.5) 100%);
+  border-radius: 50%;
+  z-index: 7;
+}
+
+.container {
+  background-color: #2d2d2d;
+  padding: 10rem 0;
+  min-height: 100vh;
+}
+
+.container .circle-inner-container {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 3rem 0 rgba(245, 238, 102, 0.2);
+          box-shadow: 0 0 3rem 0 rgba(245, 238, 102, 0.2);
+}
+
+.container .circle-inner-container .sky, .container .circle-inner-container .sky-reflection {
+  width: 500px;
+  height: 295px;
+  background: linear-gradient(225deg, #f5ee66 0%, #916536 100%);
+}
+
+.container .circle-inner-container .sky-reflection {
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+  top: 295px;
+  left: 0;
+}
+
+.container .circle-inner-container .cloud-back, .container .circle-inner-container .cloud-front {
+  background-color: #f5ee66;
+  width: 120px;
+  height: 4px;
+  top: 36px;
+  left: 465px;
+  z-index: 1;
+}
+
+.container .circle-inner-container .cloud-front {
+  width: 140px;
+  height: 9px;
+  top: 45px;
+  left: 405px;
+  z-index: 2;
+}
+
+.container .circle-inner-container .background-land-left, .container .circle-inner-container .background-land-right {
+  width: 168px;
+  height: 16px;
+  border-top-left-radius: 144%;
+  border-top-right-radius: 113%;
+  background-color: rgba(0, 8, 37, 0.42);
+  opacity: 0.5;
+  top: 277px;
+  left: 0;
+  z-index: 1;
+}
+
+.container .circle-inner-container .background-land-right {
+  left: 350px;
+  top: 270px;
+}
+
+.container .circle-inner-container .mountain-back, .container .circle-inner-container .mountain-back::after {
+  border-bottom: 37px solid #6f633c;
+  top: 254px;
+  left: 99px;
+  z-index: 2;
+}
+
+.container .circle-inner-container .mountain-back::after {
+  content: "";
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+  top: 37px;
+  left: -100px;
+  border-bottom-color: #7c7441;
+}
+
+.container .circle-inner-container .mountain-top, .container .circle-inner-container .mountain-top::after {
+  width: 9px;
+  height: 0;
+  border-bottom: 60px solid #f5ee66;
+  top: 232px;
+  left: 162px;
+  z-index: 3;
+}
+
+.container .circle-inner-container .mountain-top::after {
+  position: absolute;
+  content: "";
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+  top: 60px;
+  left: -100px;
+}
+
+.container .circle-inner-container .mountain-front, .container .circle-inner-container .mountain-front::after {
+  width: 10px;
+  height: 0;
+  border-bottom: 60px solid #6f633c;
+  border-top-right-radius: 90%;
+  top: 232px;
+  left: 161px;
+  z-index: 4;
+}
+
+.container .circle-inner-container .mountain-front::after {
+  content: "";
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+  border-bottom-color: #7c7441;
+  top: 60px;
+  left: -100px;
+}
+
+.container .circle-inner-container .smoke-left, .container .circle-inner-container .smoke-left-reflection {
+  width: 18px;
+  height: 4px;
+  top: 207px;
+  left: 343px;
+  opacity: 0;
+  z-index: 6;
+  -webkit-animation-delay: 8.3s;
+          animation-delay: 8.3s;
+}
+
+.container .circle-inner-container .smoke-left-reflection {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 8, 37, 0.42)));
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 8, 37, 0.42) 100%);
+  top: 374px;
+}
+
+.container .circle-inner-container .smoke-right-one, .container .circle-inner-container .smoke-right-one-reflection, .container .circle-inner-container .smoke-right-two, .container .circle-inner-container .smoke-right-two-reflection {
+  width: 18px;
+  height: 4px;
+  top: 207px;
+  left: 346px;
+  z-index: 6;
+  opacity: 0;
+  -webkit-animation-delay: 5.6s;
+          animation-delay: 5.6s;
+}
+
+.container .circle-inner-container .smoke-right-one-reflection {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 8, 37, 0.42)));
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 8, 37, 0.42) 100%);
+  top: 374px;
+}
+
+.container .circle-inner-container .smoke-right-two, .container .circle-inner-container .smoke-right-two-reflection {
+  width: 20px;
+  height: 6px;
+  top: 204px;
+  -webkit-animation-delay: 7.5s;
+          animation-delay: 7.5s;
+}
+
+.container .circle-inner-container .smoke-right-two-reflection {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 8, 37, 0.42)));
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 8, 37, 0.42) 100%);
+  top: 369px;
+}
+
+.container .circle-inner-container .volcano-flash {
+  background: -webkit-gradient(linear, left bottom, left top, from(yellow), color-stop(25%, orange), color-stop(75%, red), to(yellow));
+  background: linear-gradient(0deg, yellow 0%, orange 25%, red 75%, yellow 100%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  opacity: 1;
+  z-index: 5;
+  width: 40px;
+  height: 162px;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  top: 129px;
+  left: 325px;
+  border-radius: 60%;
+  -webkit-animation-delay: 10.6s;
+          animation-delay: 10.6s;
+}
+
+.container .circle-inner-container .volcano-flash-column {
+  background: -webkit-gradient(linear, left bottom, left top, from(yellow), color-stop(25%, orange), color-stop(75%, red), to(yellow));
+  background: linear-gradient(0deg, yellow 0%, orange 25%, red 75%, yellow 100%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  opacity: 1;
+  z-index: 5;
+  transform: translate(50%, 50%);
+  border-radius: 50%;
+  top: 133px;
+  left: 353px;
+  width: 10px;
+  height: 159px;
+  -webkit-animation-delay: 14.6s;
+          animation-delay: 14.6s;
+}
+
+.container .circle-inner-container .volcano-smoke-column, .container .circle-inner-container .volcano-smoke-column-reflection, .container .circle-inner-container .volcano-smoke-column-second, .container .circle-inner-container .volcano-smoke-column-second-reflection {
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  width: 30px;
+  height: 102px;
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(rgba(0, 8, 37, 0.42)));
+  background: linear-gradient(0deg, transparent 0%, rgba(0, 8, 37, 0.42) 100%);
+  top: 161px;
+  left: 333px;
+  border-radius: 60%;
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
+  z-index: 5;
+  -webkit-animation-delay: 8.6s;
+          animation-delay: 8.6s;
+}
+
+.container .circle-inner-container .volcano-smoke-column-reflection {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 8, 37, 0.42)));
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 8, 37, 0.42) 100%);
+  top: 222px;
+}
+
+.container .circle-inner-container .volcano-smoke-column-second, .container .circle-inner-container .volcano-smoke-column-second-reflection {
+  -webkit-animation-delay: 10.6s;
+          animation-delay: 10.6s;
+}
+
+.container .circle-inner-container .volcano-smoke-column-second-reflection {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 8, 37, 0.42)));
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 8, 37, 0.42) 100%);
+  top: 222px;
+}
+
+.container .circle-inner-container .volcano-smoke-small, .container .circle-inner-container .volcano-smoke-small-reflection {
+  width: 10px;
+  height: 15px;
+  top: 207px;
+  left: 345px;
+  z-index: 5;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+}
+
+.container .circle-inner-container .volcano-smoke-small-reflection {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 8, 37, 0.42)));
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 8, 37, 0.42) 100%);
+  top: 349px;
+}
+
+.container .circle-inner-container .volcano, .container .circle-inner-container .volcano::after {
+  border-bottom: 100px solid #6f633c;
+  border-top-left-radius: 90%;
+  top: 192px;
+  left: 240px;
+  z-index: 5;
+}
+
+.container .circle-inner-container .volcano::after {
+  content: "";
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+  border-bottom-color: #7c7441;
+  top: 100px;
+  left: -120px;
+}
+
+.container .circle-inner-container .volcano-ice-top, .container .circle-inner-container .volcano-ice-top::after {
+  border-right: 10px solid transparent;
+  border-left: 39px solid transparent;
+  border-bottom: 8px solid #f5ee66;
+  border-bottom-left-radius: 50%;
+  top: 199px;
+  left: 339px;
+  z-index: 6;
+}
+
+.container .circle-inner-container .volcano-ice-top::after {
+  content: "";
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+  top: 178px;
+  left: -39px;
+  z-index: 6;
+}
+
+.container .circle-inner-container .volcano-ice-bottom, .container .circle-inner-container .volcano-ice-bottom::after {
+  border-right: 18px solid transparent;
+  border-left: 3px solid transparent;
+  border-top: 17px solid #f5ee66;
+  top: 206px;
+  left: 344px;
+  z-index: 6;
+}
+
+.container .circle-inner-container .volcano-ice-bottom::after {
+  content: "";
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+  top: 138px;
+  left: -3px;
+}
+
+.container .circle-inner-container .volcano-ice-bottom-middle, .container .circle-inner-container .volcano-ice-bottom-middle::after {
+  border-right: 1px solid transparent;
+  border-left: 29px solid transparent;
+  border-top: 20px solid #f5ee66;
+  top: 206px;
+  left: 356px;
+  z-index: 6;
+}
+
+.container .circle-inner-container .volcano-ice-bottom-middle::after {
+  content: "";
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+  top: 132px;
+  left: -29px;
+}
+
+.container .circle-inner-container .volcano-ice-bottom-right, .container .circle-inner-container .volcano-ice-bottom-right::after {
+  border-bottom: 0 solid transparent;
+  border-left: 17px solid #f5ee66;
+  border-top: 13px solid transparent;
+  top: 200px;
+  left: 379px;
+  z-index: 6;
+}
+
+.container .circle-inner-container .volcano-ice-bottom-right::after {
+  content: "";
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+  top: 158px;
+  left: -17px;
+}
+
+.container .circle-inner-container .lava, .container .circle-inner-container .lava-reflection, .container .circle-inner-container .lava-front, .container .circle-inner-container .lava-front-reflection {
+  background: -webkit-gradient(linear, left bottom, left top, from(yellow), color-stop(25%, orange), color-stop(75%, red), to(yellow));
+  background: linear-gradient(0deg, yellow 0%, orange 25%, red 75%, yellow 100%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  opacity: 1;
+  z-index: 5;
+  background: -webkit-gradient(linear, left bottom, left top, from(#6f633c), color-stop(75%, orange), to(yellow));
+  background: linear-gradient(0deg, #6f633c 0%, orange 75%, yellow 100%);
+  opacity: 0;
+  width: 2px;
+  height: 79px;
+  top: 192px;
+  left: 312px;
+  border-radius: 50%;
+  z-index: 7;
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+  -webkit-animation-delay: 17.6s;
+          animation-delay: 17.6s;
+}
+
+.container .circle-inner-container .lava-reflection {
+  background: -webkit-gradient(linear, left bottom, left top, from(#7c7441), color-stop(75%, orange), to(yellow));
+  background: linear-gradient(0deg, #7c7441 0%, orange 75%, yellow 100%);
+  -webkit-transform: scaleY(-1) rotate(50deg);
+          transform: scaleY(-1) rotate(50deg);
+  top: 313px;
+}
+
+.container .circle-inner-container .lava-front, .container .circle-inner-container .lava-front-reflection {
+  height: 39px;
+  top: 203px;
+  left: 331px;
+  z-index: 7;
+  opacity: 0;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+}
+
+.container .circle-inner-container .lava-front-reflection {
+  background: -webkit-gradient(linear, left bottom, left top, from(#7c7441), color-stop(75%, orange), to(yellow));
+  background: linear-gradient(0deg, #7c7441 0%, orange 75%, yellow 100%);
+  -webkit-transform: scaleY(-1) rotate(35deg);
+          transform: scaleY(-1) rotate(35deg);
+  top: 342px;
+}
+
+.container .circle-inner-container .shore, .container .circle-inner-container .shore::after {
+  border-top: 12px solid transparent;
+  border-right: 350px solid #605637;
+  border-left: 150px solid #605637;
+  border-bottom: 5px solid #605637;
+  top: 279px;
+  left: 0;
+  z-index: 6;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.container .circle-inner-container .shore::after {
+  content: "";
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+  top: 5px;
+  left: -150px;
+  z-index: 7;
+  border-bottom-color: #6f633c;
+  border-left-color: #6f633c;
+  border-right-color: #6f633c;
+}
+
+.container .circle-inner-container .shore-middle {
+  width: 112px;
+  height: 0;
+  border-top: 9px solid #605637;
+  border-right: 127px solid transparent;
+  border-left: 9px solid #605637;
+  border-bottom: 36px solid #605637;
+  border-bottom-right-radius: 51%;
+  top: 295px;
+  left: 0;
+  z-index: 8;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.container .circle-inner-container .shore-middle-reflection {
+  top: 299px;
+  left: -24px;
+  z-index: 7;
+  border-top: 28px solid #6f633c;
+  border-right: 254px solid transparent;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.container .circle-inner-container .shore-front {
+  border-top: 40px solid #605637;
+  border-right: 216px solid transparent;
+  top: 332px;
+  left: 0;
+  z-index: 9;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.container .circle-inner-container .shore-dark-front {
+  border-top: 40px solid transparent;
+  border-left: 216px solid rgba(0, 8, 37, 0.42);
+  border-top: 54px solid transparent;
+  border-bottom-right-radius: 50px;
+  opacity: 0.25;
+  top: 277px;
+  left: 0;
+  z-index: 10;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.container .circle-inner-container .shore-front-reflection {
+  top: 332px;
+  left: -34px;
+  z-index: 6;
+  border-top: 76px solid #6f633c;
+  border-right: 254px solid transparent;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.container .circle-inner-container .tree-one, .container .circle-inner-container .tree-one-reflection {
+  border-bottom: 184px solid #48412e;
+  top: 39px;
+  left: 82px;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.container .circle-inner-container .tree-one .tree-top, .container .circle-inner-container .tree-one-reflection .tree-top {
+  top: 7px;
+  left: -15px;
+  width: 10px;
+  height: 5px;
+}
+
+.container .circle-inner-container .tree-one .crown-oval-top, .container .circle-inner-container .tree-one-reflection .crown-oval-top {
+  top: -4px;
+  left: -11px;
+  width: 14px;
+  height: 8px;
+}
+
+.container .circle-inner-container .tree-one .branch-right, .container .circle-inner-container .tree-one-reflection .branch-right, .container .circle-inner-container .tree-one .branch-right-small, .container .circle-inner-container .tree-one-reflection .branch-right-small {
+  top: 65px;
+  left: -15px;
+  border-top: 2px solid transparent;
+  border-left: 30px solid #48412e;
+  border-bottom: 1px solid transparent;
+}
+
+.container .circle-inner-container .tree-one .branch-right .crown, .container .circle-inner-container .tree-one-reflection .branch-right .crown, .container .circle-inner-container .tree-one .branch-right-small .crown, .container .circle-inner-container .tree-one-reflection .branch-right-small .crown, .container .circle-inner-container .tree-one .branch-right .tree-top, .container .circle-inner-container .tree-one .branch-right-small .tree-top, .container .circle-inner-container .tree-one-reflection .branch-right .tree-top, .container .circle-inner-container .tree-one-reflection .branch-right-small .tree-top {
+  width: 15px;
+  height: 8px;
+  top: -12px;
+  left: -18px;
+}
+
+.container .circle-inner-container .tree-one .branch-right .crown-oval, .container .circle-inner-container .tree-one-reflection .branch-right .crown-oval, .container .circle-inner-container .tree-one .branch-right-small .crown-oval, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .crown-oval, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .crown-oval, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .crown-oval, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .crown-oval, .container .circle-inner-container .tree-one-reflection .branch-right-small .crown-oval, .container .circle-inner-container .tree-one .tree-high .branch-right-small .crown-oval, .container .circle-inner-container .tree-high .tree-one .branch-right-small .crown-oval, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .crown-oval, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .crown-oval, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .crown-oval, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .crown-oval, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .crown-oval, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .crown-oval, .container .circle-inner-container .tree-one .branch-right .crown-oval-top, .container .circle-inner-container .tree-one-reflection .branch-right .tree-one .crown-oval-top, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right .crown-oval-top, .container .circle-inner-container .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .branch-right-small .tree-one .crown-oval-top, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .tree-one .crown-oval-top, .container .circle-inner-container .tree-one .tree-one-reflection .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .tree-one .crown-oval-top, .container .circle-inner-container .tree-one .tree-high .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .tree-one .crown-oval-top, .container .circle-inner-container .tree-one .tree-one-reflection .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .tree-one .crown-oval-top, .container .circle-inner-container .tree-one .tree-high-reflection .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .branch-right .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right .crown-oval-top, .container .circle-inner-container .tree-one-reflection .branch-right .crown-oval-top, .container .circle-inner-container .tree-one .branch-right-small .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-high .branch-right-small .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-one .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .tree-one .branch-right-small .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-one .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .branch-right .tree-bottom, .container .circle-inner-container .tree-one-reflection .branch-right .tree-one .tree-bottom, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right .tree-bottom, .container .circle-inner-container .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .branch-right-small .tree-one .tree-bottom, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .tree-one .tree-bottom, .container .circle-inner-container .tree-one .tree-one-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .tree-one .tree-bottom, .container .circle-inner-container .tree-one .tree-high .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .tree-one .tree-bottom, .container .circle-inner-container .tree-one .tree-one-reflection .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .tree-one .tree-bottom, .container .circle-inner-container .tree-one .tree-high-reflection .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .branch-right .tree-one-reflection .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right .tree-bottom, .container .circle-inner-container .tree-one-reflection .branch-right .tree-bottom, .container .circle-inner-container .tree-one .branch-right-small .tree-one-reflection .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high .branch-right-small .tree-one-reflection .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-one .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-one .branch-right-small .tree-one-reflection .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .tree-one-reflection .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-one .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .tree-one-reflection .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .branch-right .tree-high .tree-bottom, .container .circle-inner-container .tree-high .tree-one .branch-right .tree-bottom, .container .circle-inner-container .tree-one-reflection .branch-right .tree-high .tree-bottom, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right .tree-bottom, .container .circle-inner-container .tree-one .branch-right-small .tree-high .tree-bottom, .container .circle-inner-container .tree-high .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .tree-high .tree-bottom, .container .circle-inner-container .tree-high .tree-one-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .tree-high .tree-bottom, .container .circle-inner-container .tree-high .tree-one .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .tree-high .tree-bottom, .container .circle-inner-container .tree-high .tree-one .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .tree-high .tree-bottom, .container .circle-inner-container .tree-high .tree-one-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .branch-right-small .tree-high .tree-bottom, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .tree-high .tree-bottom, .container .circle-inner-container .tree-high .tree-one .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .tree-high .tree-bottom, .container .circle-inner-container .tree-high .tree-high-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .tree-high .tree-bottom, .container .circle-inner-container .tree-high .tree-one-reflection .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .tree-high .tree-bottom, .container .circle-inner-container .tree-high .tree-high-reflection .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .branch-right .tree-high-reflection .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right .tree-bottom, .container .circle-inner-container .tree-one-reflection .branch-right .tree-high-reflection .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right .tree-bottom, .container .circle-inner-container .tree-one .branch-right-small .tree-high-reflection .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .tree-high-reflection .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .tree-high-reflection .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .tree-high-reflection .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .tree-high-reflection .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .branch-right-small .tree-high-reflection .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high .branch-right-small .tree-high-reflection .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-one .branch-right-small .tree-high-reflection .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-high .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .tree-high-reflection .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .tree-high-reflection .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-high .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .branch-right .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-one .branch-right .crown-oval-top, .container .circle-inner-container .tree-one-reflection .branch-right .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-one-reflection .branch-right .crown-oval-top, .container .circle-inner-container .tree-one .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-one-reflection .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-one .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-one .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-one-reflection .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-high .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-one .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .tree-one .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-high .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-one-reflection .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-high .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-one .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-high-reflection .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-one-reflection .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-high-reflection .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .branch-right .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-one .branch-right .crown-oval-top, .container .circle-inner-container .tree-one-reflection .branch-right .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-one-reflection .branch-right .crown-oval-top, .container .circle-inner-container .tree-one .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-one-reflection .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-one .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-one .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-one-reflection .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-high .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-one .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .tree-one .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-high .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-one-reflection .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-high .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-one .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-one-reflection .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .branch-right .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-one .branch-right .tree-bottom, .container .circle-inner-container .tree-one-reflection .branch-right .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-one-reflection .branch-right .tree-bottom, .container .circle-inner-container .tree-one .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-one-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-one .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-one .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-one-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-one .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-one .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-high .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-one-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-high .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-one .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-high-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-one-reflection .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-high-reflection .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .branch-right .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-one .branch-right .tree-bottom, .container .circle-inner-container .tree-one-reflection .branch-right .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-one-reflection .branch-right .tree-bottom, .container .circle-inner-container .tree-one .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-one-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-one .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-one-reflection .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-one .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-one .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-one-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-one .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-one .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-high .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-one-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-high .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-one .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-one-reflection .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .tree-one-reflection .branch-right-small .tree-bottom {
+  width: 12px;
+  height: 8px;
+  top: -8px;
+  left: -9px;
+}
+
+.container .circle-inner-container .tree-one .branch-left, .container .circle-inner-container .tree-one-reflection .branch-left {
+  top: 40px;
+  left: -38px;
+  border-top: 1px solid transparent;
+  border-right: 25px solid #48412e;
+  border-bottom: 1px solid transparent;
+}
+
+.container .circle-inner-container .tree-one .branch-left .crown, .container .circle-inner-container .tree-one-reflection .branch-left .crown, .container .circle-inner-container .tree-one .branch-left .tree-top, .container .circle-inner-container .tree-one-reflection .branch-left .tree-top {
+  width: 18px;
+  height: 8px;
+  top: -11px;
+  left: -12px;
+}
+
+.container .circle-inner-container .tree-one .branch-left .crown-oval, .container .circle-inner-container .tree-one-reflection .branch-left .crown-oval, .container .circle-inner-container .tree-one .branch-left .crown-oval-top, .container .circle-inner-container .tree-one-reflection .branch-left .crown-oval-top, .container .circle-inner-container .tree-one .branch-left .tree-bottom, .container .circle-inner-container .tree-one-reflection .branch-left .tree-bottom {
+  width: 18px;
+  height: 9px;
+  top: -9px;
+  left: -21px;
+}
+
+.container .circle-inner-container .tree-one .branch-right-small, .container .circle-inner-container .tree-one-reflection .branch-right-small {
+  top: 17px;
+  left: -9px;
+  border-top: 1px solid transparent;
+  border-left: 18px solid #48412e;
+  border-bottom: 1px solid transparent;
+}
+
+.container .circle-inner-container .tree-one .branch-right-small .crown, .container .circle-inner-container .tree-one-reflection .branch-right-small .crown, .container .circle-inner-container .tree-one .branch-right-small .tree-top, .container .circle-inner-container .tree-one-reflection .branch-right-small .tree-top {
+  width: 13px;
+  height: 7px;
+  top: -10px;
+  left: -15px;
+}
+
+.container .circle-inner-container .tree-one .branch-right-small .crown-oval, .container .circle-inner-container .tree-one-reflection .branch-right-small .crown-oval, .container .circle-inner-container .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .branch-right-small .tree-bottom {
+  width: 11px;
+  height: 7px;
+  top: -7px;
+  left: -9px;
+}
+
+.container .circle-inner-container .tree-one .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-bottom {
+  top: 175px;
+  left: -10px;
+  width: 10px;
+  height: 7px;
+}
+
+.container .circle-inner-container .tree-one-reflection {
+  border-bottom: 184px solid #6f633c;
+  top: 219px;
+  left: 82px;
+  -webkit-transform: translate(50%, 50%) scaleY(-1);
+          transform: translate(50%, 50%) scaleY(-1);
+  z-index: 5;
+}
+
+.container .circle-inner-container .tree-one-reflection .branch-right, .container .circle-inner-container .tree-one-reflection .branch-right-small {
+  border-left: 30px solid #6f633c;
+}
+
+.container .circle-inner-container .tree-one-reflection .branch-right .crown, .container .circle-inner-container .tree-one-reflection .branch-right-small .crown, .container .circle-inner-container .tree-one-reflection .branch-right .tree-top, .container .circle-inner-container .tree-one-reflection .branch-right-small .tree-top {
+  background-color: #6f633c;
+}
+
+.container .circle-inner-container .tree-one-reflection .branch-right .crown-oval, .container .circle-inner-container .tree-one-reflection .branch-right-small .crown-oval, .container .circle-inner-container .tree-one-reflection .branch-right .crown-oval-top, .container .circle-inner-container .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .branch-right .tree-bottom, .container .circle-inner-container .tree-one-reflection .branch-right-small .tree-bottom {
+  background-color: #6f633c;
+}
+
+.container .circle-inner-container .tree-high, .container .circle-inner-container .tree-high-reflection {
+  top: -82px;
+  left: 57px;
+  border-bottom: 281px solid #48412e;
+  -webkit-animation-delay: 3.1s;
+          animation-delay: 3.1s;
+}
+
+.container .circle-inner-container .tree-high .branch-right, .container .circle-inner-container .tree-high-reflection .branch-right, .container .circle-inner-container .tree-high .branch-right-small, .container .circle-inner-container .tree-high-reflection .branch-right-small {
+  top: 60px;
+  left: -15px;
+  border-top: 2px solid transparent;
+  border-left: 32px solid #48412e;
+  border-bottom: 2px solid transparent;
+}
+
+.container .circle-inner-container .tree-high .branch-right .crown, .container .circle-inner-container .tree-high-reflection .branch-right .crown, .container .circle-inner-container .tree-high .branch-right-small .crown, .container .circle-inner-container .tree-high-reflection .branch-right-small .crown, .container .circle-inner-container .tree-high .branch-right .tree-one .tree-top, .container .circle-inner-container .tree-one .tree-high .branch-right .tree-top, .container .circle-inner-container .tree-high-reflection .branch-right .tree-one .tree-top, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right .tree-top, .container .circle-inner-container .tree-high .tree-one .branch-right-small .tree-top, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .tree-top, .container .circle-inner-container .tree-high .branch-right-small .tree-one .tree-top, .container .circle-inner-container .tree-one .tree-high .branch-right-small .tree-top, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-one .tree-top, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .tree-top, .container .circle-inner-container .tree-high .branch-right .tree-one-reflection .tree-top, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right .tree-top, .container .circle-inner-container .tree-high-reflection .branch-right .tree-one-reflection .tree-top, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right .tree-top, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .tree-top, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .tree-top, .container .circle-inner-container .tree-high .branch-right-small .tree-one-reflection .tree-top, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .tree-top, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-one-reflection .tree-top, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .tree-top, .container .circle-inner-container .tree-high .branch-right .tree-three .tree-top, .container .circle-inner-container .tree-three .tree-high .branch-right .tree-top, .container .circle-inner-container .tree-high-reflection .branch-right .tree-three .tree-top, .container .circle-inner-container .tree-three .tree-high-reflection .branch-right .tree-top, .container .circle-inner-container .tree-high .branch-right-small .tree-three .tree-top, .container .circle-inner-container .tree-three .tree-high .branch-right-small .tree-top, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-three .tree-top, .container .circle-inner-container .tree-three .tree-high-reflection .branch-right-small .tree-top, .container .circle-inner-container .tree-high .branch-right .tree-three-reflection .tree-top, .container .circle-inner-container .tree-three-reflection .tree-high .branch-right .tree-top, .container .circle-inner-container .tree-high-reflection .branch-right .tree-three-reflection .tree-top, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .branch-right .tree-top, .container .circle-inner-container .tree-high .branch-right-small .tree-three-reflection .tree-top, .container .circle-inner-container .tree-three-reflection .tree-high .branch-right-small .tree-top, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-three-reflection .tree-top, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .branch-right-small .tree-top {
+  width: 16px;
+  height: 9px;
+  top: -13px;
+  left: -18px;
+}
+
+.container .circle-inner-container .tree-high .branch-right .crown-oval, .container .circle-inner-container .tree-high-reflection .branch-right .crown-oval, .container .circle-inner-container .tree-high .tree-one .branch-right-small .crown-oval, .container .circle-inner-container .tree-one .tree-high .branch-right-small .crown-oval, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .crown-oval, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .crown-oval, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .crown-oval, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .crown-oval, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .crown-oval, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .crown-oval, .container .circle-inner-container .tree-high .branch-right-small .crown-oval, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .crown-oval, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .crown-oval, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .crown-oval, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .crown-oval, .container .circle-inner-container .tree-high-reflection .branch-right-small .crown-oval, .container .circle-inner-container .tree-high .branch-right .tree-one .crown-oval-top, .container .circle-inner-container .tree-one .tree-high .branch-right .crown-oval-top, .container .circle-inner-container .tree-high-reflection .branch-right .tree-one .crown-oval-top, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right .crown-oval-top, .container .circle-inner-container .tree-high .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .tree-one .crown-oval-top, .container .circle-inner-container .tree-one .tree-high .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .tree-one .crown-oval-top, .container .circle-inner-container .tree-one .tree-one-reflection .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .tree-one .crown-oval-top, .container .circle-inner-container .tree-one .tree-high-reflection .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .tree-one .crown-oval-top, .container .circle-inner-container .tree-one .tree-one-reflection .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .branch-right-small .tree-one .crown-oval-top, .container .circle-inner-container .tree-one .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .tree-one .crown-oval-top, .container .circle-inner-container .tree-one .tree-high-reflection .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .tree-one .crown-oval-top, .container .circle-inner-container .tree-one .tree-high .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .tree-one .crown-oval-top, .container .circle-inner-container .tree-one .tree-high .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .tree-one .crown-oval-top, .container .circle-inner-container .tree-one .tree-high-reflection .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-one .crown-oval-top, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .branch-right .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right .crown-oval-top, .container .circle-inner-container .tree-high-reflection .branch-right .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right .crown-oval-top, .container .circle-inner-container .tree-high .tree-one .branch-right-small .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-high .branch-right-small .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-one .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-one .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .branch-right-small .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .branch-right .tree-one .tree-bottom, .container .circle-inner-container .tree-one .tree-high .branch-right .tree-bottom, .container .circle-inner-container .tree-high-reflection .branch-right .tree-one .tree-bottom, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right .tree-bottom, .container .circle-inner-container .tree-high .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .tree-one .tree-bottom, .container .circle-inner-container .tree-one .tree-high .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .tree-one .tree-bottom, .container .circle-inner-container .tree-one .tree-one-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .tree-one .tree-bottom, .container .circle-inner-container .tree-one .tree-high-reflection .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .tree-one .tree-bottom, .container .circle-inner-container .tree-one .tree-one-reflection .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .branch-right-small .tree-one .tree-bottom, .container .circle-inner-container .tree-one .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .tree-one .tree-bottom, .container .circle-inner-container .tree-one .tree-high-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .tree-one .tree-bottom, .container .circle-inner-container .tree-one .tree-high .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .tree-one .tree-bottom, .container .circle-inner-container .tree-one .tree-high .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .tree-one .tree-bottom, .container .circle-inner-container .tree-one .tree-high-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-one .tree-bottom, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .branch-right .tree-one-reflection .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right .tree-bottom, .container .circle-inner-container .tree-high-reflection .branch-right .tree-one-reflection .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right .tree-bottom, .container .circle-inner-container .tree-high .tree-one .branch-right-small .tree-one-reflection .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high .branch-right-small .tree-one-reflection .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-one .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .tree-one-reflection .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .tree-one-reflection .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-one .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .branch-right-small .tree-one-reflection .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .tree-one-reflection .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .tree-one-reflection .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .tree-one-reflection .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .tree-one-reflection .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-one-reflection .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .branch-right .tree-bottom, .container .circle-inner-container .tree-high-reflection .branch-right .tree-high .tree-bottom, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right .tree-bottom, .container .circle-inner-container .tree-high .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .tree-high .tree-bottom, .container .circle-inner-container .tree-high .tree-high-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .tree-high .tree-bottom, .container .circle-inner-container .tree-high .tree-one .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .tree-high .tree-bottom, .container .circle-inner-container .tree-high .tree-high-reflection .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .tree-high .tree-bottom, .container .circle-inner-container .tree-high .tree-one-reflection .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-high .tree-bottom, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .branch-right .tree-high-reflection .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right .tree-bottom, .container .circle-inner-container .tree-high-reflection .branch-right .tree-bottom, .container .circle-inner-container .tree-high .tree-one .branch-right-small .tree-high-reflection .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-high .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high .branch-right-small .tree-high-reflection .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .tree-high-reflection .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-high .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .tree-high-reflection .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .branch-right-small .tree-high-reflection .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .branch-right .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-high .branch-right .crown-oval-top, .container .circle-inner-container .tree-high-reflection .branch-right .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-high-reflection .branch-right .crown-oval-top, .container .circle-inner-container .tree-high .tree-one .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-high .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-high .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-one .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-high-reflection .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-one .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-high .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-one-reflection .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-high-reflection .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-one-reflection .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-high-reflection .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-high .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-high .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-high-reflection .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .branch-right .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-high .branch-right .crown-oval-top, .container .circle-inner-container .tree-high-reflection .branch-right .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .branch-right .crown-oval-top, .container .circle-inner-container .tree-high .tree-one .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-high .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-high .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-one .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .tree-one .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-one .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-high .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-one-reflection .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .tree-one-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-one-reflection .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-high .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-high .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .branch-right .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-high .branch-right .tree-bottom, .container .circle-inner-container .tree-high-reflection .branch-right .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-high-reflection .branch-right .tree-bottom, .container .circle-inner-container .tree-high .tree-one .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-high .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-one .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-high-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-one .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-high .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-one-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-high-reflection .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-one-reflection .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-high-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-high .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-high .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-high-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-three .tree-bottom, .container .circle-inner-container .tree-three .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .branch-right .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-high .branch-right .tree-bottom, .container .circle-inner-container .tree-high-reflection .branch-right .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .branch-right .tree-bottom, .container .circle-inner-container .tree-high .tree-one .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-high .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-one .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .tree-one .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-one .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-one-reflection .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-high .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-one-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-one-reflection .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .tree-one-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-one-reflection .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-high .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .tree-high-reflection .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-high .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-high .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-three-reflection .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .branch-right-small .tree-bottom {
+  width: 17px;
+  height: 10px;
+  top: -11px;
+  left: -7px;
+}
+
+.container .circle-inner-container .tree-high .branch-left, .container .circle-inner-container .tree-high-reflection .branch-left {
+  top: 40px;
+  left: -40px;
+  border-top: 1px solid transparent;
+  border-right: 27px solid #48412e;
+  border-bottom: 1px solid transparent;
+}
+
+.container .circle-inner-container .tree-high .branch-left .crown, .container .circle-inner-container .tree-high-reflection .branch-left .crown, .container .circle-inner-container .tree-high .branch-left .tree-one .tree-top, .container .circle-inner-container .tree-one .tree-high .branch-left .tree-top, .container .circle-inner-container .tree-high-reflection .branch-left .tree-one .tree-top, .container .circle-inner-container .tree-one .tree-high-reflection .branch-left .tree-top, .container .circle-inner-container .tree-high .branch-left .tree-one-reflection .tree-top, .container .circle-inner-container .tree-one-reflection .tree-high .branch-left .tree-top, .container .circle-inner-container .tree-high-reflection .branch-left .tree-one-reflection .tree-top, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-left .tree-top, .container .circle-inner-container .tree-high .branch-left .tree-three .tree-top, .container .circle-inner-container .tree-three .tree-high .branch-left .tree-top, .container .circle-inner-container .tree-high-reflection .branch-left .tree-three .tree-top, .container .circle-inner-container .tree-three .tree-high-reflection .branch-left .tree-top, .container .circle-inner-container .tree-high .branch-left .tree-three-reflection .tree-top, .container .circle-inner-container .tree-three-reflection .tree-high .branch-left .tree-top, .container .circle-inner-container .tree-high-reflection .branch-left .tree-three-reflection .tree-top, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .branch-left .tree-top {
+  width: 18px;
+  height: 8px;
+  top: -11px;
+  left: -12px;
+}
+
+.container .circle-inner-container .tree-high .branch-right-small, .container .circle-inner-container .tree-high-reflection .branch-right-small {
+  top: 17px;
+  left: -10px;
+  border-top: 1px solid transparent;
+  border-left: 19px solid #48412e;
+  border-bottom: 1px solid transparent;
+}
+
+.container .circle-inner-container .tree-high .branch-right-small .crown, .container .circle-inner-container .tree-high-reflection .branch-right-small .crown, .container .circle-inner-container .tree-high .branch-right-small .tree-one .tree-top, .container .circle-inner-container .tree-one .tree-high .branch-right-small .tree-top, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-one .tree-top, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .tree-top, .container .circle-inner-container .tree-high .branch-right-small .tree-one-reflection .tree-top, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .tree-top, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-one-reflection .tree-top, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .tree-top, .container .circle-inner-container .tree-high .branch-right-small .tree-three .tree-top, .container .circle-inner-container .tree-three .tree-high .branch-right-small .tree-top, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-three .tree-top, .container .circle-inner-container .tree-three .tree-high-reflection .branch-right-small .tree-top, .container .circle-inner-container .tree-high .branch-right-small .tree-three-reflection .tree-top, .container .circle-inner-container .tree-three-reflection .tree-high .branch-right-small .tree-top, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-three-reflection .tree-top, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .branch-right-small .tree-top {
+  width: 13px;
+  height: 7px;
+  top: -10px;
+  left: -14px;
+}
+
+.container .circle-inner-container .tree-high .branch-right-small .crown-oval, .container .circle-inner-container .tree-high-reflection .branch-right-small .crown-oval, .container .circle-inner-container .tree-high .branch-right-small .tree-one .crown-oval-top, .container .circle-inner-container .tree-one .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-one .crown-oval-top, .container .circle-inner-container .tree-one .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .branch-right-small .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-bottom, .container .circle-inner-container .tree-high .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-high-reflection .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-high .branch-right-small .crown-oval-top, .container .circle-inner-container .tree-high-reflection .branch-right-small .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .branch-right-small .crown-oval-top {
+  width: 12px;
+  height: 8px;
+  top: -8px;
+  left: -7px;
+}
+
+.container .circle-inner-container .tree-high .branch-left-big, .container .circle-inner-container .tree-high-reflection .branch-left-big {
+  top: 83px;
+  left: -65px;
+  border-top: 2px solid transparent;
+  border-right: 44px solid #48412e;
+  border-bottom: 2px solid transparent;
+}
+
+.container .circle-inner-container .tree-high .branch-left-big .crown, .container .circle-inner-container .tree-high-reflection .branch-left-big .crown, .container .circle-inner-container .tree-high .branch-left-big .tree-one .tree-top, .container .circle-inner-container .tree-one .tree-high .branch-left-big .tree-top, .container .circle-inner-container .tree-high-reflection .branch-left-big .tree-one .tree-top, .container .circle-inner-container .tree-one .tree-high-reflection .branch-left-big .tree-top, .container .circle-inner-container .tree-high .branch-left-big .tree-one-reflection .tree-top, .container .circle-inner-container .tree-one-reflection .tree-high .branch-left-big .tree-top, .container .circle-inner-container .tree-high-reflection .branch-left-big .tree-one-reflection .tree-top, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-left-big .tree-top, .container .circle-inner-container .tree-high .branch-left-big .tree-three .tree-top, .container .circle-inner-container .tree-three .tree-high .branch-left-big .tree-top, .container .circle-inner-container .tree-high-reflection .branch-left-big .tree-three .tree-top, .container .circle-inner-container .tree-three .tree-high-reflection .branch-left-big .tree-top, .container .circle-inner-container .tree-high .branch-left-big .tree-three-reflection .tree-top, .container .circle-inner-container .tree-three-reflection .tree-high .branch-left-big .tree-top, .container .circle-inner-container .tree-high-reflection .branch-left-big .tree-three-reflection .tree-top, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .branch-left-big .tree-top {
+  width: 22px;
+  height: 11px;
+  top: -16px;
+  left: -7px;
+}
+
+.container .circle-inner-container .tree-high .branch-left-big .crown-oval, .container .circle-inner-container .tree-high-reflection .branch-left-big .crown-oval, .container .circle-inner-container .tree-high .branch-left-big .tree-one .crown-oval-top, .container .circle-inner-container .tree-one .tree-high .branch-left-big .crown-oval-top, .container .circle-inner-container .tree-high-reflection .branch-left-big .tree-one .crown-oval-top, .container .circle-inner-container .tree-one .tree-high-reflection .branch-left-big .crown-oval-top, .container .circle-inner-container .tree-high .branch-left-big .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high .branch-left-big .crown-oval-top, .container .circle-inner-container .tree-high-reflection .branch-left-big .tree-one-reflection .crown-oval-top, .container .circle-inner-container .tree-one-reflection .tree-high-reflection .branch-left-big .crown-oval-top, .container .circle-inner-container .tree-high .branch-left-big .tree-bottom, .container .circle-inner-container .tree-high-reflection .branch-left-big .tree-bottom, .container .circle-inner-container .tree-high .branch-left-big .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-high .branch-left-big .crown-oval-top, .container .circle-inner-container .tree-high-reflection .branch-left-big .tree-three .crown-oval-top, .container .circle-inner-container .tree-three .tree-high-reflection .branch-left-big .crown-oval-top, .container .circle-inner-container .tree-high .branch-left-big .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-high .branch-left-big .crown-oval-top, .container .circle-inner-container .tree-high-reflection .branch-left-big .tree-three-reflection .crown-oval-top, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .branch-left-big .crown-oval-top {
+  width: 22px;
+  height: 11px;
+  top: -11px;
+  left: -18px;
+}
+
+.container .circle-inner-container .tree-high .tree-bottom, .container .circle-inner-container .tree-high-reflection .tree-bottom {
+  top: 272px;
+  left: -10px;
+  width: 10px;
+  height: 7px;
+}
+
+.container .circle-inner-container .tree-high-reflection {
+  border-bottom: 281px solid #6f633c;
+  -webkit-transform: translate(50%, 50%) scaleY(-1);
+          transform: translate(50%, 50%) scaleY(-1);
+  z-index: 5;
+  top: 199px;
+  left: 57px;
+}
+
+.container .circle-inner-container .tree-three, .container .circle-inner-container .tree-three-reflection {
+  border-bottom: 207px solid #48412e;
+  top: 11px;
+  left: 32px;
+  -webkit-animation-delay: 2.9s;
+          animation-delay: 2.9s;
+}
+
+.container .circle-inner-container .tree-three .tree-top, .container .circle-inner-container .tree-three-reflection .tree-top {
+  top: 7px;
+  left: -6px;
+  width: 12px;
+  height: 6px;
+}
+
+.container .circle-inner-container .tree-three .crown-oval-top, .container .circle-inner-container .tree-three-reflection .crown-oval-top {
+  top: -3px;
+  left: -17px;
+  width: 14px;
+  height: 8px;
+}
+
+.container .circle-inner-container .tree-three .branch-right, .container .circle-inner-container .tree-three-reflection .branch-right, .container .circle-inner-container .tree-three .tree-one .branch-right-small, .container .circle-inner-container .tree-one .tree-three .branch-right-small, .container .circle-inner-container .tree-three-reflection .tree-one .branch-right-small, .container .circle-inner-container .tree-one .tree-three-reflection .branch-right-small, .container .circle-inner-container .tree-three .tree-one-reflection .branch-right-small, .container .circle-inner-container .tree-one-reflection .tree-three .branch-right-small, .container .circle-inner-container .tree-three-reflection .tree-one-reflection .branch-right-small, .container .circle-inner-container .tree-one-reflection .tree-three-reflection .branch-right-small, .container .circle-inner-container .tree-three .tree-high .branch-right-small, .container .circle-inner-container .tree-high .tree-three .branch-right-small, .container .circle-inner-container .tree-three-reflection .tree-high .branch-right-small, .container .circle-inner-container .tree-high .tree-three-reflection .branch-right-small, .container .circle-inner-container .tree-three .tree-high-reflection .branch-right-small, .container .circle-inner-container .tree-high-reflection .tree-three .branch-right-small, .container .circle-inner-container .tree-three-reflection .tree-high-reflection .branch-right-small, .container .circle-inner-container .tree-high-reflection .tree-three-reflection .branch-right-small {
+  top: 65px;
+  left: -15px;
+  border-top: 2px solid transparent;
+  border-left: 30px solid #48412e;
+  border-bottom: 1px solid transparent;
+}
+
+.container .circle-inner-container .tree-three .branch-left, .container .circle-inner-container .tree-three-reflection .branch-left {
+  top: 40px;
+  left: -38px;
+  border-top: 1px solid transparent;
+  border-right: 25px solid #48412e;
+  border-bottom: 1px solid transparent;
+}
+
+.container .circle-inner-container .tree-three .branch-left .crown-oval, .container .circle-inner-container .tree-three-reflection .branch-left .crown-oval, .container .circle-inner-container .tree-three .branch-left .crown-oval-top, .container .circle-inner-container .tree-three-reflection .branch-left .crown-oval-top, .container .circle-inner-container .tree-three .branch-left .tree-bottom, .container .circle-inner-container .tree-three-reflection .branch-left .tree-bottom {
+  width: 18px;
+  height: 9px;
+  top: -9px;
+  left: -16px;
+}
+
+.container .circle-inner-container .tree-three .branch-left-big, .container .circle-inner-container .tree-three-reflection .branch-left-big {
+  top: 86px;
+  left: -65px;
+  border-top: 2px solid transparent;
+  border-right: 44px solid #48412e;
+  border-bottom: 1px solid transparent;
+}
+
+.container .circle-inner-container .tree-three .branch-left-big .crown, .container .circle-inner-container .tree-three-reflection .branch-left-big .crown, .container .circle-inner-container .tree-three .branch-left-big .tree-top, .container .circle-inner-container .tree-three-reflection .branch-left-big .tree-top {
+  width: 20px;
+  height: 9px;
+  top: -14px;
+  left: -7px;
+}
+
+.container .circle-inner-container .tree-three .branch-left-big .crown-oval, .container .circle-inner-container .tree-three-reflection .branch-left-big .crown-oval, .container .circle-inner-container .tree-three .branch-left-big .crown-oval-top, .container .circle-inner-container .tree-three-reflection .branch-left-big .crown-oval-top, .container .circle-inner-container .tree-three .branch-left-big .tree-bottom, .container .circle-inner-container .tree-three-reflection .branch-left-big .tree-bottom {
+  width: 20px;
+  height: 10px;
+  top: -12px;
+  left: -17px;
+}
+
+.container .circle-inner-container .tree-three .tree-bottom, .container .circle-inner-container .tree-three-reflection .tree-bottom {
+  top: 198px;
+  left: -10px;
+  width: 10px;
+  height: 7px;
+}
+
+.container .circle-inner-container .tree-three-reflection {
+  border-bottom: 207px solid #6f633c;
+  -webkit-transform: translate(50%, 50%) scaleY(-1);
+          transform: translate(50%, 50%) scaleY(-1);
+  z-index: 5;
+  top: 218px;
+  left: 32px;
+}
+
+.container .circle-inner-container .wave, .container .circle-inner-container .wave-two {
+  width: 300px;
+  height: 6px;
+  top: 298px;
+  left: -7px;
+  -webkit-animation-delay: 9s;
+          animation-delay: 9s;
+}
+
+.container .circle-inner-container .wave-two {
+  top: 294px;
+  left: 201px;
+  -webkit-animation-delay: 9s;
+          animation-delay: 9s;
+}
+
+.container .circle-inner-container .ripple {
+  width: 200px;
+  height: 6px;
+  opacity: 0;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+.container .circle-inner-container .riple-one {
+  top: 321px;
+  left: -16px;
+}
+
+.container .circle-inner-container .riple-two {
+  top: 326px;
+  left: 126px;
+}
+
+.container .circle-inner-container .riple-three {
+  width: 200px;
+  height: 8px;
+  top: 373px;
+  left: 94px;
+}
+
+.container .circle-inner-container .riple-four {
+  width: 234px;
+  height: 7px;
+  top: 380px;
+  left: 162px;
+}
+
+@-webkit-keyframes cloud-move {
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0.2;
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+    left: -120px;
+  }
+}
+
+@keyframes cloud-move {
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0.2;
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+    left: -120px;
+  }
+}
+
+@-webkit-keyframes bottom-right-smoking {
+  0% {
+    background-color: rgba(0, 8, 37, 0.42);
+    opacity: 1;
+  }
+  5% {
+    opacity: 1;
+    top: 156px;
+    left: 342px;
+    z-index: 7;
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+  }
+  90% {
+    background-color: #f5ee66;
+  }
+  100% {
+    width: 160px;
+    top: 295px;
+    left: 185px;
+    opacity: 0;
+  }
+}
+
+@keyframes bottom-right-smoking {
+  0% {
+    background-color: rgba(0, 8, 37, 0.42);
+    opacity: 1;
+  }
+  5% {
+    opacity: 1;
+    top: 156px;
+    left: 342px;
+    z-index: 7;
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+  }
+  90% {
+    background-color: #f5ee66;
+  }
+  100% {
+    width: 160px;
+    top: 295px;
+    left: 185px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes bottom-right-smoking-reflection {
+  0% {
+    background-color: rgba(0, 8, 37, 0.42);
+    opacity: 1;
+  }
+  5% {
+    opacity: 1;
+    top: 434px;
+    left: 342px;
+    z-index: 7;
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+  }
+  90% {
+    background-color: #f5ee66;
+  }
+  100% {
+    width: 160px;
+    top: 295px;
+    left: 185px;
+    opacity: 0;
+  }
+}
+
+@keyframes bottom-right-smoking-reflection {
+  0% {
+    background-color: rgba(0, 8, 37, 0.42);
+    opacity: 1;
+  }
+  5% {
+    opacity: 1;
+    top: 434px;
+    left: 342px;
+    z-index: 7;
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+  }
+  90% {
+    background-color: #f5ee66;
+  }
+  100% {
+    width: 160px;
+    top: 295px;
+    left: 185px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes bottom-left-smoking {
+  0% {
+    background-color: rgba(0, 8, 37, 0.42);
+    opacity: 1;
+  }
+  5% {
+    opacity: 1;
+    top: 156px;
+    left: 352px;
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+  }
+  90% {
+    background-color: #f5ee66;
+  }
+  100% {
+    width: 160px;
+    top: 295px;
+    left: 336px;
+    opacity: 0;
+  }
+}
+
+@keyframes bottom-left-smoking {
+  0% {
+    background-color: rgba(0, 8, 37, 0.42);
+    opacity: 1;
+  }
+  5% {
+    opacity: 1;
+    top: 156px;
+    left: 352px;
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+  }
+  90% {
+    background-color: #f5ee66;
+  }
+  100% {
+    width: 160px;
+    top: 295px;
+    left: 336px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes bottom-left-smoking-reflection {
+  0% {
+    background-color: rgba(0, 8, 37, 0.42);
+    opacity: 1;
+  }
+  5% {
+    opacity: 1;
+    top: 434px;
+    left: 352px;
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+  }
+  90% {
+    background-color: #f5ee66;
+  }
+  100% {
+    width: 160px;
+    top: 295px;
+    left: 336px;
+    opacity: 0;
+  }
+}
+
+@keyframes bottom-left-smoking-reflection {
+  0% {
+    background-color: rgba(0, 8, 37, 0.42);
+    opacity: 1;
+  }
+  5% {
+    opacity: 1;
+    top: 434px;
+    left: 352px;
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+  }
+  90% {
+    background-color: #f5ee66;
+  }
+  100% {
+    width: 160px;
+    top: 295px;
+    left: 336px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes volcano-smoking {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    -webkit-transform: translate(50%, 50%) scale(1);
+            transform: translate(50%, 50%) scale(1);
+    width: 30px;
+    height: 102px;
+    top: 84px;
+    left: 333px;
+  }
+  50% {
+    -webkit-transform: translate(50%, 50%) scale(1.2);
+            transform: translate(50%, 50%) scale(1.2);
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+    opacity: 0.6;
+  }
+  100% {
+    top: 0;
+    left: 185px;
+    width: 168px;
+    height: 5px;
+    -webkit-transform: translate(50%, 50%) scale(1.5);
+            transform: translate(50%, 50%) scale(1.5);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+}
+
+@keyframes volcano-smoking {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    -webkit-transform: translate(50%, 50%) scale(1);
+            transform: translate(50%, 50%) scale(1);
+    width: 30px;
+    height: 102px;
+    top: 84px;
+    left: 333px;
+  }
+  50% {
+    -webkit-transform: translate(50%, 50%) scale(1.2);
+            transform: translate(50%, 50%) scale(1.2);
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+    opacity: 0.6;
+  }
+  100% {
+    top: 0;
+    left: 185px;
+    width: 168px;
+    height: 5px;
+    -webkit-transform: translate(50%, 50%) scale(1.5);
+            transform: translate(50%, 50%) scale(1.5);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes volcano-smoking-reflection {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    -webkit-transform: translate(50%, 50%) scale(1);
+            transform: translate(50%, 50%) scale(1);
+    top: 299px;
+    left: 333px;
+    width: 30px;
+    height: 102px;
+  }
+  50% {
+    -webkit-transform: translate(50%, 50%) scale(1.2);
+            transform: translate(50%, 50%) scale(1.2);
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+    opacity: 0.6;
+  }
+  100% {
+    top: 590px;
+    left: 185px;
+    width: 168px;
+    height: 5px;
+    -webkit-transform: translate(50%, 50%) scale(1.5);
+            transform: translate(50%, 50%) scale(1.5);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+}
+
+@keyframes volcano-smoking-reflection {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    -webkit-transform: translate(50%, 50%) scale(1);
+            transform: translate(50%, 50%) scale(1);
+    top: 299px;
+    left: 333px;
+    width: 30px;
+    height: 102px;
+  }
+  50% {
+    -webkit-transform: translate(50%, 50%) scale(1.2);
+            transform: translate(50%, 50%) scale(1.2);
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+    opacity: 0.6;
+  }
+  100% {
+    top: 590px;
+    left: 185px;
+    width: 168px;
+    height: 5px;
+    -webkit-transform: translate(50%, 50%) scale(1.5);
+            transform: translate(50%, 50%) scale(1.5);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes volcano-smoking-two {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    top: 156px;
+  }
+  50% {
+    -webkit-transform: translate(50%, 50%) scale(1.2);
+            transform: translate(50%, 50%) scale(1.2);
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+    opacity: 0.6;
+  }
+  100% {
+    top: 0;
+    left: 185px;
+    width: 168px;
+    height: 5px;
+    -webkit-transform: translate(50%, 50%) scale(1.5);
+            transform: translate(50%, 50%) scale(1.5);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+}
+
+@keyframes volcano-smoking-two {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    top: 156px;
+  }
+  50% {
+    -webkit-transform: translate(50%, 50%) scale(1.2);
+            transform: translate(50%, 50%) scale(1.2);
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+    opacity: 0.6;
+  }
+  100% {
+    top: 0;
+    left: 185px;
+    width: 168px;
+    height: 5px;
+    -webkit-transform: translate(50%, 50%) scale(1.5);
+            transform: translate(50%, 50%) scale(1.5);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes volcano-smoking-reflection-two {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    top: 400px;
+  }
+  50% {
+    -webkit-transform: translate(50%, 50%) scale(1.2);
+            transform: translate(50%, 50%) scale(1.2);
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+    opacity: 0.6;
+  }
+  100% {
+    top: 590px;
+    left: 185px;
+    width: 168px;
+    height: 5px;
+    -webkit-transform: translate(50%, 50%) scale(1.5);
+            transform: translate(50%, 50%) scale(1.5);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+}
+
+@keyframes volcano-smoking-reflection-two {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    top: 400px;
+  }
+  50% {
+    -webkit-transform: translate(50%, 50%) scale(1.2);
+            transform: translate(50%, 50%) scale(1.2);
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+    opacity: 0.6;
+  }
+  100% {
+    top: 590px;
+    left: 185px;
+    width: 168px;
+    height: 5px;
+    -webkit-transform: translate(50%, 50%) scale(1.5);
+            transform: translate(50%, 50%) scale(1.5);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes earthquake {
+  0% {
+    -webkit-transform: translate(0) rotate(-0.005deg);
+            transform: translate(0) rotate(-0.005deg);
+  }
+  75% {
+    -webkit-transform: translate(2px, 1px) rotate(0);
+            transform: translate(2px, 1px) rotate(0);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(0.005deg);
+            transform: translate(-1px, -1px) rotate(0.005deg);
+  }
+  95% {
+    -webkit-transform: translate(1px, 2px) rotate(-0.005deg);
+            transform: translate(1px, 2px) rotate(-0.005deg);
+  }
+  100% {
+    -webkit-transform: translate(0) rotate(0.005deg);
+            transform: translate(0) rotate(0.005deg);
+  }
+}
+
+@keyframes earthquake {
+  0% {
+    -webkit-transform: translate(0) rotate(-0.005deg);
+            transform: translate(0) rotate(-0.005deg);
+  }
+  75% {
+    -webkit-transform: translate(2px, 1px) rotate(0);
+            transform: translate(2px, 1px) rotate(0);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(0.005deg);
+            transform: translate(-1px, -1px) rotate(0.005deg);
+  }
+  95% {
+    -webkit-transform: translate(1px, 2px) rotate(-0.005deg);
+            transform: translate(1px, 2px) rotate(-0.005deg);
+  }
+  100% {
+    -webkit-transform: translate(0) rotate(0.005deg);
+            transform: translate(0) rotate(0.005deg);
+  }
+}
+
+@-webkit-keyframes flash-smoke {
+  70% {
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+    -webkit-transform: translate(50%, 50%) scaleY(1.2);
+            transform: translate(50%, 50%) scaleY(1.2);
+    opacity: 0.1;
+  }
+  75% {
+    opacity: 1;
+  }
+  80% {
+    background-color: rgba(0, 8, 37, 0.42);
+  }
+  85% {
+    -webkit-transform: translate(50%, 50%) scaleY(1.5);
+            transform: translate(50%, 50%) scaleY(1.5);
+  }
+  100% {
+    -webkit-transform: translate(50%, 50%) scaleY(1.6);
+            transform: translate(50%, 50%) scaleY(1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes flash-smoke {
+  70% {
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+    -webkit-transform: translate(50%, 50%) scaleY(1.2);
+            transform: translate(50%, 50%) scaleY(1.2);
+    opacity: 0.1;
+  }
+  75% {
+    opacity: 1;
+  }
+  80% {
+    background-color: rgba(0, 8, 37, 0.42);
+  }
+  85% {
+    -webkit-transform: translate(50%, 50%) scaleY(1.5);
+            transform: translate(50%, 50%) scaleY(1.5);
+  }
+  100% {
+    -webkit-transform: translate(50%, 50%) scaleY(1.6);
+            transform: translate(50%, 50%) scaleY(1.6);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes flash-lava {
+  65% {
+    top: 133px;
+    left: 353px;
+    width: 10px;
+    height: 159px;
+  }
+  75% {
+    -webkit-filter: blur(1px);
+            filter: blur(1px);
+  }
+  78% {
+    -webkit-transform: translate(50%, 50%) scale(1);
+            transform: translate(50%, 50%) scale(1);
+    width: 42px;
+    height: 193px;
+    top: 100px;
+    left: 320px;
+  }
+  80% {
+    -webkit-transform: translate(50%, 50%) scale(1.1);
+            transform: translate(50%, 50%) scale(1.1);
+    -webkit-filter: blur(1px);
+            filter: blur(1px);
+  }
+  95% {
+    -webkit-transform: translate(50%, 50%) scale(1.4, 1.4);
+            transform: translate(50%, 50%) scale(1.4, 1.4);
+    background: orange;
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+  }
+  100% {
+    -webkit-transform: translate(50%, 50%) scale(1);
+            transform: translate(50%, 50%) scale(1);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    top: 133px;
+    left: 353px;
+    width: 10px;
+    height: 159px;
+  }
+}
+
+@keyframes flash-lava {
+  65% {
+    top: 133px;
+    left: 353px;
+    width: 10px;
+    height: 159px;
+  }
+  75% {
+    -webkit-filter: blur(1px);
+            filter: blur(1px);
+  }
+  78% {
+    -webkit-transform: translate(50%, 50%) scale(1);
+            transform: translate(50%, 50%) scale(1);
+    width: 42px;
+    height: 193px;
+    top: 100px;
+    left: 320px;
+  }
+  80% {
+    -webkit-transform: translate(50%, 50%) scale(1.1);
+            transform: translate(50%, 50%) scale(1.1);
+    -webkit-filter: blur(1px);
+            filter: blur(1px);
+  }
+  95% {
+    -webkit-transform: translate(50%, 50%) scale(1.4, 1.4);
+            transform: translate(50%, 50%) scale(1.4, 1.4);
+    background: orange;
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+  }
+  100% {
+    -webkit-transform: translate(50%, 50%) scale(1);
+            transform: translate(50%, 50%) scale(1);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    top: 133px;
+    left: 353px;
+    width: 10px;
+    height: 159px;
+  }
+}
+
+@-webkit-keyframes show-disapeare {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes show-disapeare {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes tree-quake {
+  0% {
+    -webkit-transform: translate(50%, 50%) rotate(-0.005deg);
+            transform: translate(50%, 50%) rotate(-0.005deg);
+  }
+  25% {
+    -webkit-transform: translate(51%, 51%) rotate(0);
+            transform: translate(51%, 51%) rotate(0);
+  }
+  30% {
+    -webkit-transform: translate(49%, 49%) rotate(0.005deg);
+            transform: translate(49%, 49%) rotate(0.005deg);
+  }
+  45% {
+    -webkit-transform: translate(50%, 52%) rotate(-0.005deg);
+            transform: translate(50%, 52%) rotate(-0.005deg);
+  }
+  50% {
+    -webkit-transform: translate(50%, 50%) rotate(0.005deg) skewX(0);
+            transform: translate(50%, 50%) rotate(0.005deg) skewX(0);
+  }
+  62% {
+    -webkit-transform: translate(50%, 50%) skewX(-1deg);
+            transform: translate(50%, 50%) skewX(-1deg);
+  }
+  75% {
+    -webkit-transform: translate(50%, 50%) skewX(0);
+            transform: translate(50%, 50%) skewX(0);
+  }
+  87% {
+    -webkit-transform: translate(50%, 50%) skewX(1deg);
+            transform: translate(50%, 50%) skewX(1deg);
+  }
+  100% {
+    -webkit-transform: translate(50%, 50%) skewX(0);
+            transform: translate(50%, 50%) skewX(0);
+  }
+}
+
+@keyframes tree-quake {
+  0% {
+    -webkit-transform: translate(50%, 50%) rotate(-0.005deg);
+            transform: translate(50%, 50%) rotate(-0.005deg);
+  }
+  25% {
+    -webkit-transform: translate(51%, 51%) rotate(0);
+            transform: translate(51%, 51%) rotate(0);
+  }
+  30% {
+    -webkit-transform: translate(49%, 49%) rotate(0.005deg);
+            transform: translate(49%, 49%) rotate(0.005deg);
+  }
+  45% {
+    -webkit-transform: translate(50%, 52%) rotate(-0.005deg);
+            transform: translate(50%, 52%) rotate(-0.005deg);
+  }
+  50% {
+    -webkit-transform: translate(50%, 50%) rotate(0.005deg) skewX(0);
+            transform: translate(50%, 50%) rotate(0.005deg) skewX(0);
+  }
+  62% {
+    -webkit-transform: translate(50%, 50%) skewX(-1deg);
+            transform: translate(50%, 50%) skewX(-1deg);
+  }
+  75% {
+    -webkit-transform: translate(50%, 50%) skewX(0);
+            transform: translate(50%, 50%) skewX(0);
+  }
+  87% {
+    -webkit-transform: translate(50%, 50%) skewX(1deg);
+            transform: translate(50%, 50%) skewX(1deg);
+  }
+  100% {
+    -webkit-transform: translate(50%, 50%) skewX(0);
+            transform: translate(50%, 50%) skewX(0);
+  }
+}
+
+@-webkit-keyframes tree-quake-reflection {
+  0% {
+    -webkit-transform: translate(50%, 50%) scaleY(-1) rotate(0.005deg);
+            transform: translate(50%, 50%) scaleY(-1) rotate(0.005deg);
+  }
+  25% {
+    -webkit-transform: translate(51%, 51%) scaleY(-1) rotate(0);
+            transform: translate(51%, 51%) scaleY(-1) rotate(0);
+  }
+  30% {
+    -webkit-transform: translate(49%, 49%) scaleY(-1) rotate(-0.005deg);
+            transform: translate(49%, 49%) scaleY(-1) rotate(-0.005deg);
+  }
+  45% {
+    -webkit-transform: translate(50%, 52%) scaleY(-1) rotate(0.005deg);
+            transform: translate(50%, 52%) scaleY(-1) rotate(0.005deg);
+  }
+  50% {
+    -webkit-transform: translate(50%, 50%) scaleY(-1) rotate(-0.005deg) skewX(0);
+            transform: translate(50%, 50%) scaleY(-1) rotate(-0.005deg) skewX(0);
+  }
+  62% {
+    -webkit-transform: translate(50%, 50%) scaleY(-1) skewX(-1deg);
+            transform: translate(50%, 50%) scaleY(-1) skewX(-1deg);
+  }
+  75% {
+    -webkit-transform: translate(50%, 50%) scaleY(-1) skewX(0);
+            transform: translate(50%, 50%) scaleY(-1) skewX(0);
+  }
+  87% {
+    -webkit-transform: translate(50%, 50%) scaleY(-1) skewX(1deg);
+            transform: translate(50%, 50%) scaleY(-1) skewX(1deg);
+  }
+  100% {
+    -webkit-transform: translate(50%, 50%) scaleY(-1) skewX(0);
+            transform: translate(50%, 50%) scaleY(-1) skewX(0);
+  }
+}
+
+@keyframes tree-quake-reflection {
+  0% {
+    -webkit-transform: translate(50%, 50%) scaleY(-1) rotate(0.005deg);
+            transform: translate(50%, 50%) scaleY(-1) rotate(0.005deg);
+  }
+  25% {
+    -webkit-transform: translate(51%, 51%) scaleY(-1) rotate(0);
+            transform: translate(51%, 51%) scaleY(-1) rotate(0);
+  }
+  30% {
+    -webkit-transform: translate(49%, 49%) scaleY(-1) rotate(-0.005deg);
+            transform: translate(49%, 49%) scaleY(-1) rotate(-0.005deg);
+  }
+  45% {
+    -webkit-transform: translate(50%, 52%) scaleY(-1) rotate(0.005deg);
+            transform: translate(50%, 52%) scaleY(-1) rotate(0.005deg);
+  }
+  50% {
+    -webkit-transform: translate(50%, 50%) scaleY(-1) rotate(-0.005deg) skewX(0);
+            transform: translate(50%, 50%) scaleY(-1) rotate(-0.005deg) skewX(0);
+  }
+  62% {
+    -webkit-transform: translate(50%, 50%) scaleY(-1) skewX(-1deg);
+            transform: translate(50%, 50%) scaleY(-1) skewX(-1deg);
+  }
+  75% {
+    -webkit-transform: translate(50%, 50%) scaleY(-1) skewX(0);
+            transform: translate(50%, 50%) scaleY(-1) skewX(0);
+  }
+  87% {
+    -webkit-transform: translate(50%, 50%) scaleY(-1) skewX(1deg);
+            transform: translate(50%, 50%) scaleY(-1) skewX(1deg);
+  }
+  100% {
+    -webkit-transform: translate(50%, 50%) scaleY(-1) skewX(0);
+            transform: translate(50%, 50%) scaleY(-1) skewX(0);
+  }
+}
+
+@-webkit-keyframes wave-moving {
+  0% {
+    opacity: 0.5;
+    -webkit-transform: translate(50%, 50%) scale(1);
+            transform: translate(50%, 50%) scale(1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(50%, 50%) scale(5);
+            transform: translate(50%, 50%) scale(5);
+    top: 108%;
+    left: -100%;
+  }
+}
+
+@keyframes wave-moving {
+  0% {
+    opacity: 0.5;
+    -webkit-transform: translate(50%, 50%) scale(1);
+            transform: translate(50%, 50%) scale(1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(50%, 50%) scale(5);
+            transform: translate(50%, 50%) scale(5);
+    top: 108%;
+    left: -100%;
+  }
+}
+
+@-webkit-keyframes wave-moving-two {
+  0% {
+    opacity: 0.5;
+  }
+  20% {
+    -webkit-transform: translate(50%, 50%) scale(1);
+            transform: translate(50%, 50%) scale(1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(50%, 50%) scale(5);
+            transform: translate(50%, 50%) scale(5);
+    top: 100%;
+    left: 50%;
+  }
+}
+
+@keyframes wave-moving-two {
+  0% {
+    opacity: 0.5;
+  }
+  20% {
+    -webkit-transform: translate(50%, 50%) scale(1);
+            transform: translate(50%, 50%) scale(1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(50%, 50%) scale(5);
+            transform: translate(50%, 50%) scale(5);
+    top: 100%;
+    left: 50%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

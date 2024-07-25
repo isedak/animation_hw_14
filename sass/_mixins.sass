@@ -1,0 +1,24 @@
+=keyframes($name)
+    @-webkit-keyframes #{$name}
+        @content
+    @-moz-keyframes #{$name}
+        @content
+    @-ms-keyframes #{$name}
+        @content
+    @keyframes #{$name}
+        @content
+
+=content-reflection
+    content: ""
+    transform: scaleY(-1)
+
+=lava
+    background: linear-gradient(0deg, yellow 0%, orange 25%, red 75%, yellow 100%)
+    box-sizing: border-box
+    transform: translate(50%, 50%)
+    opacity: 1
+    z-index: 5
+
+=box-sizing-translate-center
+    box-sizing: border-box
+    transform: translate(50%, 50%)

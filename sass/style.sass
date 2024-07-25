@@ -1,0 +1,1012 @@
+@import variables
+@import mixins
+
+*
+    margin: 0
+    padding: 0
+
+%circle-container-base
+    width: 500px
+    height: 500px
+    box-sizing: border-box
+    border-radius: 50%
+    margin: 0 auto
+
+%triangle-big
+    position: absolute
+    width: 10px
+    height: 0
+    border-left: 120px solid transparent
+    border-right: 120px solid transparent
+
+%size-null
+    width: 0
+    height: 0
+
+%triangle-small
+    position: absolute
+    border-left: 100px solid transparent
+    border-right: 100px solid transparent
+
+%smoke
+    border-top-left-radius: 100%
+    border-top-right-radius: 100%
+    border-bottom-right-radius: 100%
+    border-bottom-left-radius: 100%
+    background: linear-gradient(0deg, transparent 0%, $shadow-color-transparent 100%)
+    filter: blur(2px)
+    transform: translate(50%, 50%)
+
+.circle-inner-container > *, * ::after
+    position: absolute
+
+.cloud-movement
+    animation: cloud-move 15s linear normal 2
+
+.earthquake
+    animation: earthquake 5.5s ease-out normal 1
+
+.smoke-up
+    animation: volcano-smoking 15s ease-out normal 1
+
+.smoke-up-two
+    animation: volcano-smoking-two 15s ease-out normal 1
+
+.smoke-up-reflection
+    animation: volcano-smoking-reflection 15s ease-out normal 1
+
+.smoke-up-reflection-two
+    animation: volcano-smoking-reflection-two 15s ease-out normal 1
+
+.bottom-right-down
+    animation: bottom-right-smoking 12s ease-out normal 1
+
+.bottom-right-down-reflection
+    animation: bottom-right-smoking-reflection 12s ease-out normal 1
+
+.bottom-left-down
+    animation: bottom-left-smoking 12s ease-out normal 1
+
+.bottom-left-down-reflection
+    animation: bottom-left-smoking-reflection 12s ease-out normal 1
+
+.flash-smoke
+    animation: flash-smoke 5.5s ease-out normal 2
+
+.flash-lava-column
+    animation: flash-lava 3.5s ease-out normal 1
+
+.show-disapeare
+    animation: show-disapeare 7s ease-out normal 1
+
+.tree-quake
+    animation: tree-quake 5.5s linear normal 1
+
+.tree-quake-reflection
+    animation: tree-quake-reflection 5.5s linear normal 1
+
+.wave-movment
+    animation: wave-moving 18s ease-in normal 1
+
+.wave-movment-two
+    animation: wave-moving-two 17s ease-in normal 1
+
+.tree
+    +box-sizing-translate-center
+    @extend %size-null
+    z-index: 11
+    border-bottom-right-radius: 13%
+    border-bottom-left-radius: 13%
+    border-left: 6px solid transparent
+    border-right: 6px solid transparent
+
+.branch-left, .branch-left-big, .branch-right, .branch-right-small
+    +box-sizing-translate-center
+    @extend %size-null
+    position: absolute
+
+.crown, .crown-oval
+    +box-sizing-translate-center
+    position: absolute
+    background-color: $tree-color
+
+.crown
+    border-radius: 50px 50px 0 0 
+
+.crown-oval
+    border-radius: 50%
+
+.wave, .ripple
+    transform: translate(50%, 50%)
+    background: linear-gradient(0deg, rgba($dust-color-light, 0.5) 0%, transparent 50%, rgba($volcano-color-dark, 0.5) 100%)
+    border-radius: 50%
+    z-index: 7
+
+.container
+    background-color: rgb(45, 45, 45)
+    padding: 10rem 0
+    min-height: 100vh
+    .circle-inner-container
+        @extend %circle-container-base
+        position: relative
+        overflow: hidden
+        box-shadow: 0 0 3rem 0 rgba($dust-color-light, 0.2)
+        .sky
+            width: 500px
+            height: 295px
+            background: linear-gradient(225deg, $dust-color-light 0%, $dust-color-dark 100%)
+        .sky-reflection
+            @extend .sky
+            transform: scaleY(-1)
+            top: 295px
+            left: 0
+        .cloud-back
+            @extend %smoke
+            background-color: $dust-color-light
+            width: 120px
+            height: 4px
+            top: 36px
+            left: 465px
+            z-index: 1
+        .cloud-front
+            @extend .cloud-back
+            width: 140px
+            height: 9px
+            top: 45px
+            left: 405px
+            z-index: 2        
+        .background-land-left
+            width: 168px
+            height: 16px
+            border-top-left-radius: 144%
+            border-top-right-radius: 113%
+            background-color: $shadow-color-transparent
+            opacity: 0.5
+            top: 277px
+            left: 0
+            z-index: 1
+        .background-land-right
+            @extend .background-land-left
+            left: 350px
+            top: 270px
+        .mountain-back
+            @extend %triangle-small
+            @extend %size-null
+            border-bottom: 37px solid $volcano-color-dark
+            top: 254px
+            left: 99px
+            z-index: 2
+        .mountain-back::after
+            @extend .mountain-back
+            +content-reflection
+            top: 37px
+            left: -100px
+            border-bottom-color: $volcano-color-lifght
+        .mountain-top
+            @extend %triangle-small
+            width: 9px
+            height: 0
+            border-bottom: 60px solid $dust-color-light
+            top: 232px
+            left: 162px
+            z-index: 3
+        .mountain-top::after
+            position: absolute
+            @extend .mountain-top
+            +content-reflection
+            top: 60px
+            left: -100px
+        .mountain-front
+            @extend %triangle-small
+            width: 10px
+            height: 0
+            border-bottom: 60px solid $volcano-color-dark
+            border-top-right-radius: 90%
+            top: 232px
+            left: 161px
+            z-index: 4
+        .mountain-front::after
+            @extend .mountain-front
+            +content-reflection
+            border-bottom-color: $volcano-color-lifght
+            top: 60px
+            left: -100px
+        .smoke-left
+            @extend %smoke
+            width: 18px
+            height: 4px
+            top: 207px
+            left: 343px
+            opacity: 0
+            z-index: 6
+            animation-delay: 8.3s
+        .smoke-left-reflection
+            @extend .smoke-left
+            background: linear-gradient(180deg, transparent 0%, $shadow-color-transparent 100%)
+            top: 374px
+        .smoke-right-one
+            @extend %smoke
+            width: 18px
+            height: 4px
+            top: 207px
+            left: 346px
+            z-index: 6
+            opacity: 0
+            animation-delay: 5.6s
+        .smoke-right-one-reflection
+            @extend .smoke-right-one
+            background: linear-gradient(180deg, transparent 0%, $shadow-color-transparent 100%)
+            top: 374px
+        .smoke-right-two
+            @extend .smoke-right-one
+            width: 20px
+            height: 6px
+            top: 204px
+            animation-delay: 7.5s
+        .smoke-right-two-reflection
+            @extend .smoke-right-two
+            background: linear-gradient(180deg, transparent 0%, $shadow-color-transparent 100%)
+            top: 369px
+        .volcano-flash
+            +lava
+            width: 40px
+            height: 162px
+            filter: blur(3px)
+            top: 129px
+            left: 325px
+            border-radius: 60%
+            animation-delay: 10.6s
+        .volcano-flash-column
+            +lava
+            transform: translate(50%, 50%)
+            border-radius: 50%            
+            top: 133px
+            left: 353px
+            width: 10px
+            height: 159px
+            animation-delay: 14.6s
+        .volcano-smoke-column
+            transform: translate(50%, 50%)
+            width: 30px
+            height: 102px
+            background: linear-gradient(0deg, transparent 0%, $shadow-color-transparent 100%)
+            top: 161px
+            left: 333px
+            border-radius: 60%
+            filter: blur(6px)
+            z-index: 5
+            animation-delay: 8.6s
+        .volcano-smoke-column-reflection
+            @extend .volcano-smoke-column
+            background: linear-gradient(180deg, transparent 0%, $shadow-color-transparent 100%)
+            top: 222px
+        .volcano-smoke-column-second
+            @extend .volcano-smoke-column
+            animation-delay: 10.6s
+        .volcano-smoke-column-second-reflection
+            @extend .volcano-smoke-column-second
+            background: linear-gradient(180deg, transparent 0%, $shadow-color-transparent 100%)
+            top: 222px        
+        .volcano-smoke-small
+            @extend %smoke
+            width: 10px
+            height: 15px
+            top: 207px
+            left: 345px
+            z-index: 5
+            animation-delay: 8s
+        .volcano-smoke-small-reflection
+            @extend .volcano-smoke-small
+            background: linear-gradient(180deg, transparent 0%, $shadow-color-transparent 100%)
+            top: 349px
+        .volcano
+            @extend %triangle-big
+            border-bottom: 100px solid $volcano-color-dark
+            border-top-left-radius: 90%
+            top: 192px
+            left: 240px
+            z-index: 5
+        .volcano::after
+            @extend .volcano
+            +content-reflection
+            border-bottom-color: $volcano-color-lifght
+            top: 100px
+            left: -120px
+        .volcano-ice-top
+            @extend %size-null
+            border-right: 10px solid transparent
+            border-left: 39px solid transparent
+            border-bottom: 8px solid $dust-color-light
+            border-bottom-left-radius: 50%
+            top: 199px
+            left: 339px
+            z-index: 6
+        .volcano-ice-top::after
+            @extend .volcano-ice-top
+            +content-reflection
+            top: 178px
+            left: -39px
+            z-index: 6
+        .volcano-ice-bottom
+            @extend %size-null
+            border-right: 18px solid transparent
+            border-left: 3px solid transparent
+            border-top: 17px solid $dust-color-light
+            top: 206px
+            left: 344px
+            z-index: 6
+        .volcano-ice-bottom::after
+            @extend .volcano-ice-bottom
+            +content-reflection
+            top: 138px
+            left: -3px
+        .volcano-ice-bottom-middle
+            @extend %size-null
+            border-right: 1px solid transparent
+            border-left: 29px solid transparent
+            border-top: 20px solid $dust-color-light
+            top: 206px
+            left: 356px
+            z-index: 6
+        .volcano-ice-bottom-middle::after
+            @extend .volcano-ice-bottom-middle
+            +content-reflection
+            top: 132px
+            left: -29px
+        .volcano-ice-bottom-right
+            @extend %size-null
+            border-bottom: 0 solid transparent
+            border-left: 17px solid $dust-color-light
+            border-top: 13px solid transparent
+            top: 200px
+            left: 379px
+            z-index: 6
+        .volcano-ice-bottom-right::after
+            @extend .volcano-ice-bottom-right
+            +content-reflection
+            top: 158px
+            left: -17px
+        .lava
+            +lava
+            background: linear-gradient(0deg, $volcano-color-dark 0%, orange 75%, yellow 100%)
+            opacity: 0
+            width: 2px
+            height: 79px
+            top: 192px
+            left: 312px
+            border-radius: 50%
+            z-index: 7
+            transform: rotate(50deg)
+            animation-delay: 17.6s
+        .lava-reflection
+            @extend .lava
+            background: linear-gradient(0deg, $volcano-color-lifght 0%, orange 75%, yellow 100%)
+            transform: scaleY(-1) rotate(50deg)
+            top: 313px
+        .lava-front
+            @extend .lava
+            height: 39px
+            top: 203px
+            left: 331px
+            z-index: 7
+            opacity: 0
+            transform: rotate(35deg)
+        .lava-front-reflection
+            @extend .lava-front
+            background: linear-gradient(0deg, $volcano-color-lifght 0%, orange 75%, yellow 100%)
+            transform: scaleY(-1) rotate(35deg)
+            top: 342px
+        .shore
+            @extend %size-null
+            border-top: 12px solid transparent
+            border-right: 350px solid $shore-color
+            border-left: 150px solid $shore-color
+            border-bottom: 5px solid $shore-color
+            top: 279px
+            left: 0
+            z-index: 6
+            animation-delay: 0.2s
+        .shore::after
+            @extend .shore
+            +content-reflection
+            top: 5px
+            left: -150px
+            z-index: 7
+            border-bottom-color: $volcano-color-dark
+            border-left-color: $volcano-color-dark
+            border-right-color: $volcano-color-dark
+        .shore-middle
+            width: 112px
+            height: 0
+            border-top: 9px solid $shore-color
+            border-right: 127px solid transparent
+            border-left: 9px solid $shore-color
+            border-bottom: 36px solid $shore-color
+            border-bottom-right-radius: 51%
+            top: 295px
+            left: 0
+            z-index: 8
+            animation-delay: 0.4s
+        .shore-middle-reflection
+            @extend %size-null
+            top: 299px
+            left: -24px
+            z-index: 7
+            border-top: 28px solid $volcano-color-dark
+            border-right: 254px solid transparent
+            animation-delay: 0.4s
+        .shore-front
+            @extend %size-null
+            border-top: 40px solid $shore-color
+            border-right: 216px solid transparent
+            top: 332px
+            left: 0
+            z-index: 9
+            animation-delay: 0.6s
+        .shore-dark-front
+            @extend %size-null
+            border-top: 40px solid transparent
+            border-left: 216px solid $shadow-color-transparent
+            border-top: 54px solid transparent
+            border-bottom-right-radius: 50px
+            opacity: 0.25
+            top: 277px
+            left: 0
+            z-index: 10
+            animation-delay: 0.6s
+        .shore-front-reflection
+            @extend %size-null
+            top: 332px
+            left: -34px
+            z-index: 6
+            border-top: 76px solid $volcano-color-dark
+            border-right: 254px solid transparent
+            animation-delay: 0.6s
+        .tree-one
+            border-bottom: 184px solid $tree-color
+            top: 39px
+            left: 82px
+            animation-delay: 3s
+            .tree-top
+                @extend .crown
+                top: 7px
+                left: -15px
+                width: 10px
+                height: 5px
+            .crown-oval-top
+                @extend .crown-oval
+                top: -4px
+                left: -11px
+                width: 14px
+                height: 8px
+            .branch-right
+                top: 65px
+                left: -15px                
+                border-top: 2px solid transparent
+                border-left: 30px solid $tree-color
+                border-bottom: 1px solid transparent
+                .crown
+                    width: 15px
+                    height: 8px
+                    top: -12px
+                    left: -18px
+                .crown-oval
+                    width: 12px
+                    height: 8px
+                    top: -8px
+                    left: -9px
+            .branch-left
+                top: 40px
+                left: -38px
+                border-top: 1px solid transparent
+                border-right: 25px solid $tree-color
+                border-bottom: 1px solid transparent
+                .crown
+                    width: 18px
+                    height: 8px
+                    top: -11px
+                    left: -12px
+                .crown-oval
+                    width: 18px
+                    height: 9px
+                    top: -9px
+                    left: -21px
+            .branch-right-small
+                @extend .branch-right
+                top: 17px
+                left: -9px
+                border-top: 1px solid transparent
+                border-left: 18px solid $tree-color
+                border-bottom: 1px solid transparent
+                .crown
+                    width: 13px
+                    height: 7px
+                    top: -10px
+                    left: -15px
+                .crown-oval
+                    width: 11px
+                    height: 7px
+                    top: -7px
+                    left: -9px
+            .tree-bottom
+                @extend .crown-oval
+                top: 175px
+                left: -10px
+                width: 10px
+                height: 7px
+        .tree-one-reflection
+            @extend .tree-one
+            border-bottom: 184px solid $volcano-color-dark
+            top: 219px
+            left: 82px
+            transform: translate(50%, 50%) scaleY(-1)
+            z-index: 5
+            .branch-right
+                border-left: 30px solid $volcano-color-dark
+                .crown
+                    background-color: $volcano-color-dark
+                .crown-oval
+                    background-color: $volcano-color-dark
+        .tree-high
+            top: -82px
+            left: 57px
+            border-bottom: 281px solid $tree-color
+            animation-delay: 3.1s
+            .branch-right
+                top: 60px
+                left: -15px                
+                border-top: 2px solid transparent
+                border-left: 32px solid $tree-color
+                border-bottom: 2px solid transparent
+                .crown
+                    width: 16px
+                    height: 9px
+                    top: -13px
+                    left: -18px
+                .crown-oval
+                    width: 17px
+                    height: 10px
+                    top: -11px
+                    left: -7px                    
+            .branch-left
+                top: 40px
+                left: -40px
+                border-top: 1px solid transparent
+                border-right: 27px solid $tree-color
+                border-bottom: 1px solid transparent
+                .crown
+                    width: 18px
+                    height: 8px
+                    top: -11px
+                    left: -12px
+            .branch-right-small
+                @extend .branch-right
+                top: 17px
+                left: -10px
+                border-top: 1px solid transparent
+                border-left: 19px solid $tree-color
+                border-bottom: 1px solid transparent
+                .crown
+                    width: 13px
+                    height: 7px
+                    top: -10px
+                    left: -14px
+                .crown-oval
+                    width: 12px
+                    height: 8px
+                    top: -8px
+                    left: -7px
+            .branch-left-big
+                top: 83px
+                left: -65px
+                border-top: 2px solid transparent
+                border-right: 44px solid $tree-color
+                border-bottom: 2px solid transparent
+                .crown
+                    width: 22px
+                    height: 11px
+                    top: -16px
+                    left: -7px
+                .crown-oval
+                    width: 22px
+                    height: 11px
+                    top: -11px
+                    left: -18px
+            .tree-bottom
+                @extend .crown-oval
+                top: 272px
+                left: -10px
+                width: 10px
+                height: 7px
+        .tree-high-reflection
+            @extend .tree-high
+            border-bottom: 281px solid $volcano-color-dark
+            transform: translate(50%, 50%) scaleY(-1)
+            z-index: 5
+            top: 199px
+            left: 57px
+        .tree-three
+            border-bottom: 207px solid $tree-color
+            top: 11px
+            left: 32px
+            animation-delay: 2.9s
+            .tree-top
+                @extend .crown
+                top: 7px
+                left: -6px
+                width: 12px
+                height: 6px
+            .crown-oval-top
+                @extend .crown-oval
+                top: -3px
+                left: -17px
+                width: 14px
+                height: 8px
+            .branch-right
+                top: 65px
+                left: -15px                
+                border-top: 2px solid transparent
+                border-left: 30px solid $tree-color
+                border-bottom: 1px solid transparent
+            .branch-left
+                top: 40px
+                left: -38px
+                border-top: 1px solid transparent
+                border-right: 25px solid $tree-color
+                border-bottom: 1px solid transparent
+                .crown-oval
+                    width: 18px
+                    height: 9px
+                    top: -9px
+                    left: -16px
+            .branch-left-big
+                top: 86px
+                left: -65px
+                border-top: 2px solid transparent
+                border-right: 44px solid $tree-color
+                border-bottom: 1px solid transparent
+                .crown
+                    width: 20px
+                    height: 9px
+                    top: -14px
+                    left: -7px
+                .crown-oval
+                    width: 20px
+                    height: 10px
+                    top: -12px
+                    left: -17px
+            .tree-bottom
+                @extend .crown-oval
+                top: 198px
+                left: -10px
+                width: 10px
+                height: 7px
+        .tree-three-reflection
+            @extend .tree-three
+            border-bottom: 207px solid $volcano-color-dark
+            transform: translate(50%, 50%) scaleY(-1)
+            z-index: 5
+            top: 218px
+            left: 32px
+        .wave
+            width: 300px
+            height: 6px
+            top: 298px
+            left: -7px
+            animation-delay: 9s
+        .wave-two
+            @extend .wave
+            top: 294px
+            left: 201px
+            animation-delay: 9s
+        .ripple
+            width: 200px
+            height: 6px
+            opacity: 0
+            animation-delay: 5s
+        .riple-one
+            top: 321px
+            left: -16px
+        .riple-two
+            top: 326px
+            left: 126px
+        .riple-three
+            width: 200px
+            height: 8px
+            top: 373px
+            left: 94px            
+        .riple-four
+            width: 234px
+            height: 7px
+            top: 380px
+            left: 162px
+
++keyframes (cloud-move)
+    100%
+        transform: scale(2)
+        opacity: 0.2
+        filter: blur(3px)
+        left: -120px
+
++keyframes (bottom-right-smoking)
+    0%
+        background-color: $shadow-color-transparent
+        opacity: 1
+    5%
+        opacity: 1
+        top: 156px
+        left: 342px
+        z-index: 7
+    75%
+        transform: scale(1.2)
+        filter: blur(4px)
+    90%
+        background-color: $dust-color-light
+    100%
+        width: 160px
+        top: 295px
+        left: 185px
+        opacity: 0
+
++keyframes (bottom-right-smoking-reflection)
+    0%
+        background-color: $shadow-color-transparent
+        opacity: 1
+    5%
+        opacity: 1
+        top: 434px
+        left: 342px
+        z-index: 7
+    75%
+        transform: scale(1.2)
+        filter: blur(4px)
+    90%
+        background-color: $dust-color-light
+    100%
+        width: 160px
+        top: 295px
+        left: 185px
+        opacity: 0
+
++keyframes (bottom-left-smoking)
+    0%
+        background-color: $shadow-color-transparent
+        opacity: 1
+    5%
+        opacity: 1
+        top: 156px
+        left: 352px
+    75%
+        transform: scale(1.2)
+        filter: blur(4px)
+    90%
+        background-color: $dust-color-light
+    100%
+        width: 160px
+        top: 295px
+        left: 336px
+        opacity: 0
+
++keyframes (bottom-left-smoking-reflection)
+    0%
+        background-color: $shadow-color-transparent
+        opacity: 1
+    5%
+        opacity: 1
+        top: 434px
+        left: 352px
+    75%
+        transform: scale(1.2)
+        filter: blur(4px)
+    90%
+        background-color: $dust-color-light
+    100%
+        width: 160px
+        top: 295px
+        left: 336px
+        opacity: 0
+
++keyframes (volcano-smoking)
+    0%
+        opacity: 1     
+    5%
+        transform: translate(50%, 50%) scale(1)
+        width: 30px
+        height: 102px
+        top: 84px
+        left: 333px
+    50%
+        transform: translate(50%, 50%) scale(1.2)
+        filter: blur(3px)
+        opacity: 0.6
+    100%
+        top: 0
+        left: 185px
+        width: 168px
+        height: 5px
+        transform: translate(50%, 50%) scale(1.5)
+        filter: blur(4px)
+        opacity: 0
+
++keyframes (volcano-smoking-reflection)
+    0%
+        opacity: 1
+    5%
+        transform: translate(50%, 50%) scale(1)
+        top: 299px
+        left: 333px
+        width: 30px
+        height: 102px
+    50%
+        transform: translate(50%, 50%) scale(1.2)
+        filter: blur(3px)
+        opacity: 0.6
+    100%
+        top: 590px
+        left: 185px
+        width: 168px
+        height: 5px
+        transform: translate(50%, 50%) scale(1.5)
+        filter: blur(4px)
+        opacity: 0
+
++keyframes (volcano-smoking-two)
+    0%
+        opacity: 1
+    5%
+        top: 156px      
+    50%
+        transform: translate(50%, 50%) scale(1.2)
+        filter: blur(3px)
+        opacity: 0.6
+    100%
+        top: 0
+        left: 185px
+        width: 168px
+        height: 5px
+        transform: translate(50%, 50%) scale(1.5)
+        filter: blur(4px)
+        opacity: 0
+
++keyframes (volcano-smoking-reflection-two)
+    0%
+        opacity: 1
+    5%
+        top: 400px
+    50%
+        transform: translate(50%, 50%) scale(1.2)
+        filter: blur(3px)
+        opacity: 0.6
+    100%
+        top: 590px
+        left: 185px
+        width: 168px
+        height: 5px
+        transform: translate(50%, 50%) scale(1.5)
+        filter: blur(4px)
+        opacity: 0
+
++keyframes (earthquake)
+    0%
+        transform: translate(0) rotate(-0.005deg)
+    75%
+        transform: translate(2px, 1px) rotate(0)
+    80%
+        transform: translate(-1px, -1px) rotate(0.005deg)
+    95%
+        transform: translate(1px, 2px) rotate(-0.005deg)
+    100%
+        transform: translate(0) rotate(0.005deg)
+
++keyframes (flash-smoke)
+    70%
+        filter: blur(5px)
+        transform: translate(50%, 50%) scaleY(1.2)
+        opacity: 0.1
+    75%
+        opacity: 1
+    80%
+        background-color: $shadow-color-transparent
+    85%
+        transform: translate(50%, 50%) scaleY(1.5)
+    100%
+        transform: translate(50%, 50%) scaleY(1.6)
+        opacity: 0
+
++keyframes (flash-lava)
+    65%
+        top: 133px
+        left: 353px
+        width: 10px
+        height: 159px
+    75%
+        filter: blur(1px)
+    78%
+        transform: translate(50%, 50%) scale(1)        
+        width: 42px
+        height: 193px
+        top: 100px
+        left: 320px
+    80%
+        transform: translate(50%, 50%) scale(1.1)
+        filter: blur(1px)
+    95%
+        transform: translate(50%, 50%) scale(1.4, 1.4)
+        background: orange
+        filter: blur(2px)
+    100%
+        transform: translate(50%, 50%) scale(1)
+        filter: blur(0)
+        top: 133px
+        left: 353px
+        width: 10px
+        height: 159px
+
++keyframes (show-disapeare)
+    0%
+        opacity: 0
+    50%
+        opacity: 1
+    100%
+        opacity: 0
+
++keyframes (tree-quake)
+    0%
+        transform: translate(50%, 50%) rotate(-0.005deg)
+    25%
+        transform: translate(51%, 51%) rotate(0)
+    30%
+        transform: translate(49%, 49%) rotate(0.005deg)
+    45%
+        transform: translate(50%, 52%) rotate(-0.005deg)
+    50%
+        transform: translate(50%, 50%) rotate(0.005deg) skewX(0)
+    62%
+        transform: translate(50%, 50%) skewX(-1deg)
+    75% 
+        transform: translate(50%, 50%) skewX(0)
+    87%
+        transform: translate(50%, 50%) skewX(1deg)
+    100%
+        transform: translate(50%, 50%) skewX(0)
+
++keyframes (tree-quake-reflection)
+    0%
+        transform: translate(50%, 50%) scaleY(-1) rotate(0.005deg)
+    25%
+        transform: translate(51%, 51%) scaleY(-1) rotate(0)
+    30%
+        transform: translate(49%, 49%) scaleY(-1) rotate(-0.005deg)
+    45%
+        transform: translate(50%, 52%) scaleY(-1) rotate(0.005deg)
+    50%
+        transform: translate(50%, 50%) scaleY(-1) rotate(-0.005deg) skewX(0)
+    62%
+        transform: translate(50%, 50%) scaleY(-1) skewX(-1deg)
+    75% 
+        transform: translate(50%, 50%) scaleY(-1) skewX(0)
+    87%
+        transform: translate(50%, 50%) scaleY(-1) skewX(1deg)
+    100%
+        transform: translate(50%, 50%) scaleY(-1) skewX(0)
+
++keyframes (wave-moving)
+    0%
+        opacity: 0.5
+        transform: translate(50%, 50%) scale(1)
+    100%
+        opacity: 1
+        transform: translate(50%, 50%) scale(5)
+        top: 108%
+        left: -100%
+
++keyframes (wave-moving-two)
+    0%
+        opacity: 0.5
+    20%
+        transform: translate(50%, 50%) scale(1)
+    100%
+        opacity: 1
+        transform: translate(50%, 50%) scale(5)
+        top: 100%
+        left: 50%
